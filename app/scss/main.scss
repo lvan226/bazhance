@@ -2,4 +2,160 @@
 
 // CUSTOM USER STYLES & IMPORTS
 
+// Style for MENU =========================================================================
+
+.logo {
+  padding: 50px 0 20px;
+  text-align: center;
+}
+.menu {
+  border-bottom: 1px solid #000;
+  // .menu__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // .menu__nav
+  &__nav {}
+  // .menu__list
+  &__list {}
+  // .menu__list-item
+  &__list-item {
+    font-weight: 300;
+    border-bottom: 4px solid transparent;
+    transition: .4s;
+    &.active {
+      border-color: #000;
+      a {
+        color: #000;
+      }
+    }
+    &:hover:not(.active) {
+      border-color: #BDBDBD;
+    }
+    a {
+      display: inline-block;
+      padding: 30px 50px;
+      color: #555;
+    }
+    font-weight: 300;
+  }
+  // .menu__info
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &>a {
+      margin-left: 60px;
+    }
+  }
+  // .menu__search
+  &__search {
+    position: relative;
+    width: 100%;
+    max-width: 220px;
+    input {
+      padding: 6px 10px 6px 40px;
+      font-size: 14px;
+      border: none;
+      border-bottom: 1px solid $d3;
+      &::placeholder {
+        color: #3d3d3d;
+        font-weight: 100;
+      }
+    }
+  }
+  // .menu__search-btn
+  &__search-btn {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    left: 10px;
+    padding: 0;
+    bottom: 6px;
+    img {
+      width: 21px;
+      height: 20px;
+    }
+  }
+  // .menu__link
+  .menu__link {
+    position: relative;
+    &-empty {
+      .menu__link-count {
+        display: none;
+      }
+    }
+    &-count {
+      position: absolute;
+      right: 0px;
+      transform: translate(100%, 100%);
+      font-size: 12px;
+      font-weight: 300;
+    }
+  }
+  // .menu__user
+  &__user {
+    width: 22px;
+    height: 22px;
+    background-size: contain;
+    background-image: url(../images/dest/icon/user.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  // .menu__like
+  &__like {
+    width: 22px;
+    height: 22px;
+    background-size: contain;
+    background-image: url(../images/dest/icon/heart.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__basket {
+    width: 16px;
+    height: 20px;
+    background-size: contain;
+    background-image: url(../images/dest/icon/bag.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  }
+  .container {
+  }
+  .logo {
+  }
+  .language {
+    line-height: 1;
+    color: #000;
+  }
+  
+// Style for MENU END =========================================================================
+
+
+
+// Style for MAIN PAGE =========================================================================
+
+.header {
+  // .header__inner
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 890px;
+  }
+  // .header__title
+  &__title {
+    font-size: 72px;
+    font-weight: 300;
+  }
+  }
+  .ibg {
+  }
+  .container {
+  }
+  
+
+// Style for MAIN PAGE END =========================================================================
 

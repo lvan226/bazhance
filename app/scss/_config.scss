@@ -1,18 +1,40 @@
 // IMPORT SECTION
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'; // Optional Bootstrap Utilites
 
 
+
+
+$d3: #3d3d3d;
+
+// <НАСТРОЙКИ СЕТКИ> =========================================================================================================
+
+$mw: 1800px;
+$xs: 575.98px;
+$sm: 767.98px;
+$md: 991.98px;
+$lg: 1199.98px;
+$elg: 1849.98px;
+
+.container{max-width:$mw;margin: 0 auto; padding: 0 15px; width: 100%;
+	@media (max-width:$elg){max-width: 1290px;}
+	@media (max-width:$lg){max-width: 970px;}
+	@media (max-width:$md){max-width: 750px;}
+  @media (max-width:$sm){max-width: 600px;padding:0 10px;}
+  @media (max-width:$xs){max-width: 100%;padding:0 10px;}
+}
+// </НАСТРОЙКИ СЕТКИ> =========================================================================================================
+
 // USER VARIABLES SECTION
 
-$accent: orange; // Accent Color
-$fontsize: 16px; // Body Font Size
-$textcolor: #333; // Text Color
+$accent: #000; // Accent Color
+$fontsize: 18px; // Body Font Size
+$textcolor: #000; // Text Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
-$roboto: Roboto, sans-serif; // Roboto Font Family
+$montserrat: Montserrat, sans-serif; // Roboto Font Family
 
 // Bootstrap compatible gutter variable => $gutter
 
@@ -22,21 +44,23 @@ $gutter: $grid-gutter-width;
 
 // FONTS LOAD SECTION
 
-@mixin font($fname, $fstyle, $fweight, $furl) {
+@mixin font($fname, $fstyle, $fweight, $furl, $furl2) {
 	@font-face {
 		font-family: $fname;
 		font-style: $fstyle;
 		font-weight: $fweight;
 		font-display: swap;
-		src: local($fname), url($furl) format('woff2');
+		src: local($fname),
+			url($furl) format('woff2'), 
+			url($furl2) format('woff');
 	}
 }
 
-
-@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2');
-@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2');
-@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2');
-@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2');
+@include font('Montserrat', normal, 100, '../fonts/Montserrat-Thin.woff2', '../fonts/Montserrat-Thin.woff');
+@include font('Montserrat', normal, 300, '../fonts/Montserrat-Light.woff2', '../fonts/Montserrat-Light.woff');
+@include font('Montserrat', normal, 400, '../fonts/Montserrat-Regular.woff2', '../fonts/Montserrat-Regular.woff');
+@include font('Montserrat', normal, 500, '../fonts/Montserrat-Medium.woff2', '../fonts/Montserrat-Medium.woff');
+@include font('Montserrat', normal, 700, '../fonts/Montserrat-Bold.woff2', '../fonts/Montserrat-Bold.woff');
 
 
 // GENERAL DOCUMENT STYLES
@@ -57,7 +81,7 @@ input, textarea {
 }
 
 body {
-	font-family: $roboto;
+	font-family: $montserrat;
 	font-size: $fontsize;
 	min-width: 320px;
 	position: relative;
@@ -70,3 +94,25 @@ img {
 	max-width: 100%;
 }
 
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	display: inline-block;
+}
+a {
+	color: #000;
+	display: inline-block;
+	&:hover {
+		color: #000;
+		text-decoration: none;
+	}
+}
+
+.ibg {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
