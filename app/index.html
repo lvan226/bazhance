@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="ru">
 
 <head>
 
@@ -18,53 +18,289 @@
 	<!-- CUSTOM HTML -->
 
 
-	<!-- <МЕНЮ> -->
-	<div class="menu">
-		<div class="container">
-			<div class="logo">
-				<a href=""><img src="images/dest/icon/logo.png" alt="Логотип"></a>
-			</div>
-			<div class="menu__inner">
-				<nav class="menu__nav">
-					<ul class="menu__list">
-						<li class="menu__list-item active"><a href="#">Главная</a></li>
-						<li class="menu__list-item"><a href="#">Новинки</a></li>
-						<li class="menu__list-item"><a href="#">Каталог</a></li>
-						<li class="menu__list-item"><a href="#">Контакты</a></li>
-						<li class="menu__list-item"><a href="#">FAQ</a></li>
-					</ul>
-				</nav>
-				<div class="menu__info">
-					<div class="menu__search">
-						<button class="menu__search-btn"><img src="images/dest/icon/search-icon.svg" alt=""></button>
-						<input type="text" placeholder="Search for...">
-					</div>
-					<a href="" class="menu__user"></a>
-					<a href="" class="menu__like menu__link menu__link-empty"><span class="menu__link-count">99</span></a>
-					<a href="" class="menu__basket menu__link"><span class="menu__link-count">01</span></a>
-					<a href="" class="language">
-						RUS
-					</a>
+	<!-- Шапка END -->
+	<header class="header">
+		<div class="menu">
+			<div class="container">
+				<div class="logo">
+					<a href=""><img src="images/dest/icon/logo.png" alt="Логотип"></a>
 				</div>
-				<!-- /.menu__info -->
+				<div class="menu__inner">
+					<nav class="menu__nav">
+						<ul class="menu__list">
+							<li class="menu__list-item active"><a href="#">Главная</a></li>
+							<li class="menu__list-item"><a href="#">Новинки</a></li>
+							<li class="menu__list-item"><a href="#">Каталог</a></li>
+							<li class="menu__list-item"><a href="#">Контакты</a></li>
+							<li class="menu__list-item"><a href="#">FAQ</a></li>
+						</ul>
+					</nav>
+					<div class="menu__info">
+						<div class="menu__search">
+							<button class="menu__search-btn"><img src="images/dest/icon/search-icon.svg" alt=""></button>
+							<input type="text" placeholder="Search for...">
+						</div>
+						<a href="" class="menu__user"></a>
+						<a href="" class="menu__like menu__link"><span class="menu__link-count">99</span></a>
+						<a href="" class="menu__basket menu__link menu__link-empty"><span class="menu__link-count">01</span></a>
+						<a href="" class="language">
+							RUS
+						</a>
+					</div>
+					<!-- /.menu__info -->
+				</div>
+				<!-- /.menu__inner -->
 			</div>
-			<!-- /.menu__inner -->
+			<!-- /.container -->
 		</div>
-		<!-- /.container -->
-	</div>
-	<!-- </МЕНЮ> -->
+		<!-- /.menu -->
+	</header>
+	<!-- Шапка END -->
 
-	<!-- <ШАПКА> -->
-	<header class="header ibg" style="background-image: url(images/dest/main/hero-bg.png);">
+	<!-- Главный экран -->
+	<div class="main ibg" style="background-image: url(images/dest/main/hero-bg.png);">
 		<div class="container">
-			<div class="header__inner">
-				<div class="header__title">Lookbook</div>
+			<div class="main__inner">
+				<div class="main__title">Lookbook</div>
 			</div>
 			<!-- /.header__inner -->
 		</div>
 		<!-- /.container -->
-	</header>
-	<!-- </ШАПКА>-->
+	</div>
+	<!-- Главный экран END -->
+
+	<!-- Каталог на главной -->
+	<div class="main-catalog">
+		<div class="container">
+			<h2 class="main-catalog__title title2">Каталог</h2>
+			<div class="main-catalog__list main-catalog-slick">
+				<div class="main-catalog__item">
+					<div class="main-catalog__item-image"></div>
+					<div class="main-catalog__item-title">Пальто</div>
+				</div>
+				<div class="main-catalog__item">
+					<div class="main-catalog__item-image"></div>
+					<div class="main-catalog__item-title">Куртки</div>
+				</div>
+				<div class="main-catalog__item">
+					<div class="main-catalog__item-image"></div>
+					<div class="main-catalog__item-title">Брюки</div>
+				</div>
+				<div class="main-catalog__item">
+					<div class="main-catalog__item-image"></div>
+					<div class="main-catalog__item-title">Блузы</div>
+				</div>
+				<div class="main-catalog__item">
+					<div class="main-catalog__item-image"></div>
+					<div class="main-catalog__item-title">Пиджаки</div>
+				</div>
+				<div class="main-catalog__item">
+					<div class="main-catalog__item-image"></div>
+					<div class="main-catalog__item-title">Футболки</div>
+				</div>
+			</div>
+			<!-- /.main-catalog__list -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- Каталог на главной END -->
+
+	<!-- О нас -->
+	<div class="main-about">
+		<div class="main-about__item">
+			<div class="container">
+				<div class="main-about__inner">
+					<div class="main-about__imagebox">
+						<div class="main-about__image ibg" style="background-image: url(images/dest/main/about-1.jpg);"></div>
+					</div>
+					<div class="main-about__content">
+						<p>BAZHANE - это новый украинский бренд дизайнерской одежды.
+							Основателем
+							и идейным вдохновителем бренда является Анна Шведова. Название нашего бренда произростает из ...
+							Изначально
+							мы
+							не хотели, чтобы вещи, которые мы производим, ассоциировались с именем основателя. Вещи должны говорить
+							сами
+							за
+							себя.</p>
+					</div>
+					<!-- /.main-about__content -->
+				</div>
+				<!-- /.main-about__inner -->
+			</div>
+			<!-- container -->
+		</div>
+		<!-- /.main-about__item -->
+		<div class="main-about__item">
+			<div class="container">
+				<div class="main-about__inner">
+					<div class="main-about__imagebox">
+						<div class="main-about__image ibg" style="background-image: url(images/dest/main/about-1.jpg);"></div>
+					</div>
+					<div class="main-about__content">
+						<p>Свой путь бренд начал чуть больше года назад. Первостепенная задача – привнести на рынок качественные,
+							стильные и доступные для каждого изделия.</p>
+					</div>
+					<!-- /.main-about__content -->
+				</div>
+				<!-- /.main-about__inner -->
+			</div>
+			<!-- container -->
+		</div>
+		<!-- /.main-about__item -->
+		<div class="main-about__item">
+			<div class="container">
+				<div class="main-about__inner">
+					<div class="main-about__imagebox">
+						<div class="main-about__image ibg" style="background-image: url(images/dest/main/about-1.jpg);"></div>
+					</div>
+					<div class="main-about__content">
+						<p>Нашими ключевыми позициями считаются пальто словно украденные из музея эстетики, кожаные куртки с
+							акцентом на практичность их использования, и брюки с изящной посадкой.</p>
+					</div>
+					<!-- /.main-about__content -->
+				</div>
+				<!-- /.main-about__inner -->
+			</div>
+			<!-- container -->
+		</div>
+		<!-- /.main-about__item -->
+		<div class="main-about__item">
+			<div class="container">
+				<div class="main-about__inner">
+					<div class="main-about__imagebox">
+						<div class="main-about__image ibg" style="background-image: url(images/dest/main/about-1.jpg);"></div>
+					</div>
+					<div class="main-about__content">
+						<p>Наше производство находится в Турции и Харькове, а пошивом занимаются отдельные фабрики, оснащённые нашим
+							оборудованием.
+							Материалы мы привозим из всеми любимой Италии, отбирая только натуральные и приятные на ощупь ткани.</p>
+					</div>
+					<!-- /.main-about__content -->
+				</div>
+				<!-- /.main-about__inner -->
+			</div>
+			<!-- container -->
+		</div>
+		<!-- /.main-about__item -->
+		<div class="main-about__item">
+			<div class="container">
+				<div class="main-about__inner">
+					<div class="main-about__imagebox">
+						<div class="main-about__image ibg" style="background-image: url(images/dest/main/about-1.jpg);"></div>
+					</div>
+					<div class="main-about__content">
+						<p>Мы вдохновляемся прежде всего мировыми трендами в мире моды, но при этом мы хотим сохранять носибельность
+							изделий в плане цветов и фасонов. И для нас очень важно удобство клиента, чтобы вещь была лёгкой,
+							свободной и приятной. За этим стоит большая работа модельеров, стилистов и многих других членов команды.
+						</p>
+					</div>
+					<!-- /.main-about__content -->
+				</div>
+				<!-- /.main-about__inner -->
+			</div>
+			<!-- container -->
+		</div>
+		<!-- /.main-about__item -->
+	</div>
+	<!-- О нас END -->
+
+	<div class="main-global-photo">
+		<img src="images/dest/main/about-finish.jpg" alt="">
+	</div>
+	<!-- /.main-global-photo -->
+
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__inner">
+				<div class="footer__brand">
+					<div class="footer__logo">
+						<a href="#"><img src="images/dest/icon/footer-logo.svg" alt=""></a>
+					</div>
+					<div class="footer__brand-social">
+						<a class="footer__brand-link"><img src="images/dest/icon/Instagram.svg" alt=""><span>Instagram</span></a>
+						<a class="footer__brand-link"><img src="images/dest/icon/facebook.svg" alt=""><span>Facebook</span></a>
+					</div>
+				</div>
+				<!-- /.footer__brand -->
+				<div class="footer__catalog">
+					<div class="footer__title">Каталог</div>
+					<ul class="footer__list">
+						<li class="footer__list-item"><a href="#">Пальто</a></li>
+						<li class="footer__list-item"><a href="#">Блузы</a></li>
+						<li class="footer__list-item"><a href="#">Куртки</a></li>
+						<li class="footer__list-item"><a href="#">Брюки</a></li>
+						<li class="footer__list-item"><a href="#">Пиджаки</a></li>
+						<li class="footer__list-item"><a href="#">Футболки</a></li>
+					</ul>
+				</div>
+				<!-- /.footer__catalog -->
+				<div class="footer__info">
+					<div class="footer__title">Покупателям</div>
+					<ul class="footer__list">
+						<li class="footer__list-item"><a href="#">FAQ</a></li>
+						<li class="footer__list-item"><a href="#">Руководство по покупке</a></li>
+						<li class="footer__list-item"><a href="#">Оплата</a></li>
+						<li class="footer__list-item"><a href="#">Возврат</a></li>
+						<li class="footer__list-item"><a href="#">Доставка</a></li>
+						<li class="footer__list-item"><a href="#">Самовывоз</a></li>
+						<li class="footer__list-item"><a href="#">Публичная оферта</a></li>
+						<li class="footer__list-item"><a href="#">Политика конфиденциальности</a></li>
+					</ul>
+				</div>
+				<!-- /.footer__info -->
+				<div class="footer__contact">
+					<div class="footer__title">Контакты</div>
+					<ul class="footer__list">
+						<li class="footer__list-item">
+							<a href="#">
+								<img src="images/dest/icon/footer-phone.png" alt="">
+								<span>+38 (093) 139-95-64</span>
+							</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#">
+								<img src="images/dest/icon/footer-home.png" alt="">
+								<span>Киев, ул. Мечникова 7</span>
+							</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#">
+								<img src="images/dest/icon/footer-message.png" alt="">
+								<span>info@bazhane.com</span>
+							</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#">
+								<img src="images/dest/icon/footer-clock.png" alt="">
+								<span>ПН-ПТ 10:00 - 20:00</span>
+							</a>
+						</li>
+						<li class="footer__list-item">
+							<a href="#">СБ-ВС 11:00 - 20:00</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.footer__contact -->
+				<div class="footer__form">
+					<div class="footer__title">Подписаться на рассылку</div>
+					<div class="footer__form-subtitle">Будьте в курсе наших акций и поступлений</div>
+					<form action="mailer.php" method="POST">
+						<div class="footer__form-field field-animation">
+							<input class="footer__form-input" type="text" placeholder="Укажите ваш e-mail">
+						</div>
+						<button class="footer__from-btn btn">подписаться</button>
+					</form>
+					<p class="footer__form-agree">Нажимая кнопку Подписаться, я даю согласие
+						на обработку и передачу моих персональных данных</p>
+				</div>
+				<!-- /.footer__form -->
+			</div>
+			<!-- /.footer__inner -->
+		</div>
+		<!-- /.container -->
+	</footer>
 
 	<script src="js/app.min.js"></script>
 
