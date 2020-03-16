@@ -1,0 +1,118 @@
+@media (max-width: $elg) {
+  .menu__search {
+    max-width: 40px;
+    overflow: hidden;
+    transition: .4s;
+    &-btn {
+      bottom: 3px;
+    }
+    input {
+      border-bottom: 0;
+      background-color: transparent;
+    }
+  }
+  .menu__search.active {
+    max-width: 200px;
+    @media (max-width: $lg) {max-width: 180px;}
+    @media (max-width: $md) {max-width: 200px;transform: translateX(-40px);background-color: #fff;}
+    button {
+      max-width: 100%;
+    }
+    .menu__search-btn {
+      bottom: 5px;
+    }
+  }
+}
+
+.filter-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 290;
+  width: 0;
+  background-color: #000;
+  transition: opacity .9s;
+  opacity: 0;
+  &.active {
+    opacity: .8;
+    width: 100%;
+  }
+}
+@media (max-width: $md) {
+  .menu-burger {
+    transition: .3s;
+  }
+  .logo {
+    z-index: 300;
+    position: absolute;
+    svg > g {
+      transition: .3s;
+    }
+    &.active {
+      svg > g {
+        fill: #F9F6F2;
+      }
+    }
+  }
+  .menu__list-item.active {
+    border-color: #fff;
+    border-width: 2px;
+  }
+  .menu {
+    border-top: 1px solid #000;
+    border-bottom: none;
+  }
+  .menu.active {
+    border-color: #fff;
+    border-top: 1px solid #F9F6F2;
+    background-color: transparent;
+    transition: .3s;
+    .menu__search {
+      svg path {
+        stroke: #F9F6F2;;
+      }
+      input {
+        color: #F9F6F2;
+        &::placeholder {
+          color: #F9F6F2;
+        }
+      }
+    }
+    .menu__like {
+      background-image: url(../images/dest/icon/heart-media.svg);
+      &.menu__link-empty {
+        background-image: url(../images/dest/icon/heart-empty-media.svg);
+      }
+    }
+    .menu__basket {
+      background-image: url(../images/dest/icon/bag-media.svg);
+      &.menu__link-empty {
+        background-image: url(../images/dest/icon/bag-empty-media.svg);
+      }
+    }
+    .menu__user {
+      background-image: url(../images/dest/icon/user-active-menu.svg);
+    }
+    .language {
+      color: #F9F6F2;
+    }
+    .menu__link-count {
+      color: #F9F6F2;
+    }
+    .menu-burger {
+      span {
+        background-color: #F9F6F2;
+      }
+    }
+    .menu__list {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+    .menu__list-item a {
+      color: #fff;
+      padding-bottom: 10px;
+    }
+  }
+}

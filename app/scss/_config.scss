@@ -17,16 +17,24 @@ $xs: 575.98px;
 $sm: 767.98px;
 $md: 991.98px;
 $lg: 1199.98px;
+$lgh: 1280px;
 $elg: 1849.98px;
 
-.container{max-width:$mw;margin: 0 auto; padding: 0 15px; width: 100%;
-	@media (max-width:$elg){max-width: 1290px;}
+.container{max-width:$mw;margin: 0 auto; padding: 0 0px; width: 100%;
+	@media (max-width:$elg){max-width: 1310px;padding: 0 10px;}
 	@media (max-width:$lg){max-width: 970px;}
 	@media (max-width:$md){max-width: 750px;}
   @media (max-width:$sm){max-width: 600px;padding:0 10px;}
   @media (max-width:$xs){max-width: 100%;padding:0 10px;}
 }
 // </НАСТРОЙКИ СЕТКИ> =========================================================================================================
+
+@mixin ps {
+	margin-bottom: 150px;
+	@media (max-width: $lgh) {margin-bottom: 100px;}
+	// @media (max-width: $lg) {margin-bottom: 80px;}
+	// @media (max-width: $md) {margin-bottom: 60px;}
+}
 
 // USER VARIABLES SECTION
 

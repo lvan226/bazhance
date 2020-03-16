@@ -7,9 +7,20 @@
 .logo {
   padding: 50px 0 20px;
   text-align: center;
+  @media (max-width: $sm) {padding: 20px 0;position: absolute;left: 0;right: 0;width: 100%;}
+  @media (max-width: $xs) {margin: 0 auto; max-width: 240px;}
 }
 .menu {
   border-bottom: 1px solid #000;
+  @media (max-width: $md) {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 300;
+    padding: 20px 0;
+  }
   // .menu__inner
   &__inner {
     display: flex;
@@ -18,13 +29,41 @@
   }
   // .menu__nav
   &__nav {}
+  &-burger {
+    width: 30px;
+    display: none;
+    @media (min-width: 992px) {display: none;}
+    @media (max-width: $md) {display: block;}
+    span {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+    }
+    span + span {
+      margin-top: 8px;
+    }
+  }
   // .menu__list
-  &__list {}
+  &__list {
+    transition: opacity .4s;
+    @media (max-width: $md) {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -250%);
+      text-align: center;
+      opacity: 0;
+    }
+  }
   // .menu__list-item
   &__list-item {
     font-weight: 300;
     border-bottom: 4px solid transparent;
     transition: .4s;
+    @media (max-width: $md) {
+      display: block;
+    }
     &.active {
       border-color: #000;
       a {
@@ -33,11 +72,17 @@
     }
     &:hover:not(.active) {
       border-color: #BDBDBD;
+      @media (max-width: $md) {
+       border-color: transparent; 
+      }
     }
     a {
       display: inline-block;
       padding: 30px 50px;
       color: #555;
+      @media (max-width: $elg) {padding: 30px 30px;}
+      @media (max-width: $lgh) {padding: 30px 20px;}
+      @media (max-width: $lg) {padding: 30px 15px;}
     }
     font-weight: 300;
   }
@@ -48,6 +93,8 @@
     align-items: center;
     &>a {
       margin-left: 60px;
+      @media (max-width: $lgh) {margin-left: 45px;}
+      @media (max-width: $lg) {margin-left: 30px;}
     }
   }
   // .menu__search
@@ -55,11 +102,26 @@
     position: relative;
     width: 100%;
     max-width: 220px;
+    &__inner {
+      display: flex;
+    }
+    button {
+      position: absolute;
+      top: 50%;
+      font-size: 15px;
+      left: 200%;
+      // max-width: 0;
+      transition: opacity .3s;
+      background-color: transparent;
+      color: #000;
+      transform: translateY(-50%);
+    }
     input {
       padding: 6px 10px 6px 40px;
       font-size: 14px;
       border: none;
       border-bottom: 1px solid $d3;
+      max-width: 100%;
       &::placeholder {
         color: #3d3d3d;
         font-weight: 100;
@@ -74,6 +136,7 @@
     left: 10px;
     padding: 0;
     bottom: 6px;
+    z-index: -1;
     img {
       width: 21px;
       height: 20px;
@@ -144,18 +207,23 @@
 // Style for MAIN PAGE =========================================================================
 
 .main {
-  margin-bottom: 150px;
+  @include ps;
+  @media (max-width: $sm){background-position: 75% center;}
+  // @media (max-width: 400px) {background-position: -1200px center;}
+  // background-size: cover;
   // .header__inner
   &__inner {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 890px;
+    @media (max-width: $sm) {height: 640px;}
   }
   // .header__title
   &__title {
     font-size: 72px;
     font-weight: 300;
+    @media (max-width: $sm) {font-size: 48px;}
   }
   }
   .ibg {
@@ -169,23 +237,31 @@
 
 // Style for MAIN CATALOG =========================================================================
 .main-catalog {
-  margin-bottom: 150px;
+  @media (max-width: $sm) {overflow: hidden;}
+  @include ps;
   // .main-catalog__title
   &__title {
     text-align: center;
     margin-bottom: 50px;
+    letter-spacing: 0.1em;
+    @media (max-width: $sm) {margin-bottom: 30px;}
   }
   // .main-catalog__list
   &__list {}
   // .main-catalog__item
   &__item {
-
+    transition: .45s;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
   // .main-catalog__item-image
   &__item-image {
     width: 100%;
     height: 385px;
     background-color: #c4c4c4;
+    @media (max-width: $elg) {height: 280px;}
+    @media (max-width: $md) {height: 330px;width: 220px;}
   }
   // .main-catalog__item-title
   &__item-title {
@@ -194,9 +270,14 @@
     font-size: 18px;
     font-weight: 300;
     text-transform: uppercase;
+    @media (max-width: $elg) {padding-top: 20px;}
+    @media (max-width: $sm) {font-size: 16px;}
   }
   .slick-track {
     display: flex;
+  }
+  .slick-list {
+    @media (max-width: $sm) {overflow: visible;}
   }
   .slick-slide + .slick-slide {
     margin-left: 30px;
@@ -208,17 +289,27 @@
 
 // Style for MAIN ABOUT ==================================================================================
 .main-about {
-  margin-bottom: 150px;
+  @include ps;
   // .main-about__item
   &__item {
     position: relative;
+    &:last-child {
+      .main-about__content {
+        @media (max-width: $md) { padding-bottom: 0;}
+      }
+    }
     &:nth-child(even) {
       .main-about__imagebox {
         order: 1;
+        @media (max-width: $md) {order: 0;}
       }
       .main-about__image {
         left: auto;
         right: 0;
+      }
+      .main-about__content {
+        @media (max-width: $elg) {margin-right: 100px;margin-left: auto;}
+        @media (max-width: $md) {margin-right: 0;margin-left: 0;}
       }
     }
   }
@@ -226,11 +317,17 @@
   &__inner {
     display: flex;
     align-items: center;
+    @media (max-width: $md) {flex-wrap: wrap;}
   }
   // .main-about__imagebox
   &__imagebox {
     width: 50%;
     min-height: 960px;
+    @media (max-width: $elg) {min-height: 683px;}
+    @media (max-width: $lgh) {min-height: 600px;}
+    @media (max-width: $lg) {min-height: 435px;}
+    @media (max-width: $md) {min-height: 550px;width: 100%;}
+    @media (max-width: $xs) {min-height: 460px;}
   }
   // .main-about__image
   &__image {
@@ -239,6 +336,9 @@
     left: 0;
     width: 50%;
     height: 100%;
+    background-position: center center;
+    @media (max-width: $md) {height: 550px;width: 100%;}
+    @media (max-width: $xs) {height: 460px;}
   }
   // .main-about__content
   &__content {
@@ -250,6 +350,9 @@
     margin-right: auto;
     font-size: 24px;
     line-height: 1.6;
+    @media (max-width: $elg) {font-size: 20px;margin-left: 100px;}
+    @media (max-width: $lg) {font-size: 18px;}
+    @media (max-width: $md) {margin: 0;width: 100%;padding: 20px 0;}
   }
   }
   .container {
@@ -258,7 +361,10 @@
   }
   
 .main-global-photo {
-  margin-bottom: 150px;
+  @include ps;
+  img {
+    width: 100%;
+  }
 }
 // Style for MAIN ABOUT END===============================================================================
 
@@ -273,12 +379,16 @@
   // .footer__inner
   &__inner {
     display: flex;
+    @media (max-width: $lg) {flex-wrap: wrap;}
   }
   // .footer__brand
   &__brand {
     width: 100%;
     max-width: 280px;
     margin-right: 160px;
+    @media (max-width: $elg) {margin-right: 50px;}
+    @media (max-width: $lg) {order: 3;max-width: 50%;margin-right: 0;align-self: center;width: auto;}
+    @media (max-width: $sm) {order: -1;width: 100%;max-width: 100%;margin-bottom: 30px;}
   }
   // .footer__logo
   &__logo {
@@ -294,12 +404,32 @@
   &__brand-link {
     font-size: 14px;
     display: flex;
+    transition: .35s;
+    &:hover {
+      color: #555;
+      svg path {
+        stroke: #555;
+      }
+      &:last-child svg path {
+        fill: #555;
+      }
+    }
+    &:last-child svg path {
+      fill: #000;
+    }
+    svg {
+      margin-right: 10px;
+      path {
+        transition: .35s;
+        stroke: #000;
+      }
+    }
     & + & {
       margin-left: 45px;
     }
-    img {
-      margin-right: 10px;
-    }
+    // img {
+    //   margin-right: 10px;
+    // }
   }
   // .footer__catalog
   &__catalog {
@@ -323,12 +453,19 @@
   // .footer__info
   &__info {
     margin-right: 70px;
-    min-width: 275px;
+    min-width: 260px;
+    @media (max-width: $elg) {margin-right: 20px;}
+    @media (max-width: $lg) {margin-left: auto;}
+    @media (max-width: $sm) {margin-left: 0;width: 100%;order: 1;margin-top: 30px;}
   }
   // .footer__contact
   &__contact {
     margin-right: 100px;
     min-width: 200px;
+    @media (max-width: $elg) {margin-right: 50px;}
+    @media (max-width: $lg) {margin-right: 0;margin-left: auto;}
+    @media (max-width: $sm) {margin-left: auto;width: auto;}
+    @media (max-width: 400px) {margin-left: 0;width: 100%;margin-top: 30px;order: 2;}
     .footer__list-item {
       line-height: 2;
       padding-left: 32px;
@@ -344,6 +481,8 @@
   &__form {
     max-width: 340px;
     width: 100%;
+    @media (max-width: $lg) {order: 2;margin-left: 0;margin-top: 50px;margin-right: auto;}
+    @media (max-width: $sm) {margin-top: 30px;}
     &-input {
       display: block;
       padding: 6px 12px;
@@ -380,3 +519,4 @@
   .btn {
   }
 // Style for Footer END ===============================================================================
+@import 'media';
