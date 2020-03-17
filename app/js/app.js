@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 	// Custom JS
+
+
 	// Слайдер на главной странице
 	$('.main-catalog-slick').slick({
 		slidesToShow: 6,
@@ -45,10 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	// Поиск анимация выдвижения
-	// $('.menu__search').on('click', function () {
-	// 	$(this).addClass('active');
-	// });
-
 	$(".menu__search").hover(function() {
 		$(".menu__search").addClass('active');
 	},
