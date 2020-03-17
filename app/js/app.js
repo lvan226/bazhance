@@ -1,7 +1,26 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 	// Custom JS
-
+	// Анимация полосы в меню
+	var line = document.querySelector('.nav-indicator');
+	var itemsMenu = document.querySelectorAll('.nav-item');
+	// console.log(line);
+	// console.log(itemsMenu);
+	findPos(itemsMenu);
+	function findPos(elems) {
+		for (var i = 0; i < elems.length; i++) {
+			elems[i].addEventListener('mouseover', function () {
+				// console.log(this.offsetLeft);
+				line.style.height = 4 + 'px';
+				line.style.marginLeft = this.offsetLeft + 'px';
+				// console.log(this.offsetWidth);
+				line.style.width = this.offsetWidth + 'px';
+			});
+			elems[i].addEventListener('mouseout', function () {
+				line.style.height = 0 + 'px';
+			});
+		}
+	}
 
 	// Слайдер на главной странице
 	$('.main-catalog-slick').slick({
@@ -69,3 +88,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 });
+
+// function inputField(input, line) {
+// 	$('');
+// }
