@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		dots: false,
 		responsive: [
 			{
-				breakpoint: 1281,
+				breakpoint: 1365,
 				settings: {
 					slidesToShow: 5,
 				}
