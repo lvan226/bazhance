@@ -86,6 +86,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 	});
 
+	// Стилизация селектов
+	$('select').styler({
+
+	});
 
 });
 

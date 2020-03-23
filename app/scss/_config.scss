@@ -25,7 +25,8 @@ $elg: 1849.98px;
 	@media (max-width:$lg){max-width: 970px;}
 	@media (max-width:$md){max-width: 750px;}
   @media (max-width:$sm){max-width: 600px;padding:0 10px;}
-  @media (max-width:$xs){max-width: 100%;;padding:0 10px;}
+	@media (max-width:$xs){max-width: 100%;;padding:0 30px;}
+	@media (max-width: 360px) {max-width: 320px;padding:0 10px;}
 }
 // </НАСТРОЙКИ СЕТКИ> =========================================================================================================
 
@@ -64,11 +65,13 @@ $gutter: $grid-gutter-width;
 	}
 }
 
-@include font('Montserrat', normal, 100, '../fonts/Montserrat-Thin.woff2', '../fonts/Montserrat-Thin.woff');
-@include font('Montserrat', normal, 300, '../fonts/Montserrat-Light.woff2', '../fonts/Montserrat-Light.woff');
-@include font('Montserrat', normal, 400, '../fonts/Montserrat-Regular.woff2', '../fonts/Montserrat-Regular.woff');
-@include font('Montserrat', normal, 500, '../fonts/Montserrat-Medium.woff2', '../fonts/Montserrat-Medium.woff');
-@include font('Montserrat', normal, 700, '../fonts/Montserrat-Bold.woff2', '../fonts/Montserrat-Bold.woff');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700&display=swap');
+
+// @include font('Montserrat', normal, 100, '../fonts/Montserrat-Thin.woff2', '../fonts/Montserrat-Thin.woff');
+// @include font('Montserrat', normal, 300, '../fonts/Montserrat-Light.woff2', '../fonts/Montserrat-Light.woff');
+// @include font('Montserrat', normal, 400, '../fonts/Montserrat-Regular.woff2', '../fonts/Montserrat-Regular.woff');
+// @include font('Montserrat', normal, 500, '../fonts/Montserrat-Medium.woff2', '../fonts/Montserrat-Medium.woff');
+// @include font('Montserrat', normal, 700, '../fonts/Montserrat-Bold.woff2', '../fonts/Montserrat-Bold.woff');
 
 
 // GENERAL DOCUMENT STYLES
@@ -87,7 +90,12 @@ input, textarea {
 	&:focus:required:invalid { border-color: red }
 	&:required:valid { border-color: green }
 }
-
+html,
+body{
+  height: 100%;
+  position: relative;
+  // overflow-x: hidden;
+}
 body {
 	font-family: $montserrat;
 	font-size: $fontsize;
@@ -153,6 +161,40 @@ a {
 	}
 }
 
+.jq-selectbox {
+	&.active {
+		
+	}
+}
+.jq-selectbox__select {
+	cursor: pointer;
+	padding-right: 30px;
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		background-image: url(../images/dest/icon/arrow-down-select.svg);
+		background-size: cover;
+		width: 20px;
+		height: 10px;
+	}
+}
+.jq-selectbox__dropdown {
+	background: #FFFFFF;
+	box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.25);
+	border-radius: 2px;
+	padding: 15px;
+	li {
+		transition: .3s;
+		cursor: pointer;
+		&:hover {
+			color: #555;
+		}
+	}
+}
 // Style for MAIN SLICK =========================================================================
 .slick-list {
 	overflow: hidden;
@@ -161,5 +203,8 @@ a {
 	
 }
 
+.black-hover {
+	
+}
 
 // Style for MAIN SLICK =========================================================================

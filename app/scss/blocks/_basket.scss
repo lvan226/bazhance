@@ -1,0 +1,247 @@
+// Style for basket =========================================================================
+.basket {
+  margin-bottom: 20px;
+  // .basket__orders
+  &__orders {
+    margin-bottom: 50px;
+  }
+  // .basket__orders-item
+  &__orders-item {}
+  }
+  .orderblock {
+    position: relative;
+    display: flex;
+    font-weight: 300;
+    border-bottom: 1px solid #DEDEDE;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  // .orderblock__section
+  &__section {}
+  // .orderblock__list
+  &__list {
+    // display: flex;
+  }
+  // .orderblock__close
+  &__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    width: 30px;
+    text-align: center;
+    transition: .3s;
+    svg {
+      transition: .3s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  // .orderblock__img
+  &__img {
+    width: 120px;
+    height: 162px;
+    margin-right: 30px;
+  }
+  // .orderblock__content
+  &__content {
+    width: 100%;
+  }
+  // .orderblock__title
+  &__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  // .orderblock__subtitle
+  &__subtitle {
+    font-size: 10px;
+  }
+  // .orderblock__info
+  &__info {
+    display: flex;
+    margin-top: 20px;
+  }
+  // .orderblock__color
+  &__color {
+    margin-right: 105px;
+  }
+  // .orderblock__info-title
+  &__info-title {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  // .orderblock__color-type
+  &__color-type {
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+  }
+  // .orderblock__size
+  &__size {
+    margin-right: 80px;
+  }
+  // .orderblock__info-count
+  &__info-count {
+    font-size: 24px;
+  }
+  // .orderblock__length
+  &__length {
+    margin-right: 70px;
+  }
+  // .orderblock__country
+  &__country {
+    max-width: 250px;
+    width: 100%;
+  }
+  // .orderblock__sum
+  &__sum {
+    &-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-less {
+      height: 1px;
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+      position: relative;
+      cursor: pointer;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 1px;
+        width: 11px;
+        background-color: #000;
+        z-index: 1;
+      }
+    }
+    &-more {
+      margin-left: 10px;
+      width: 22px;
+      height: 22px;
+      position: relative;
+      cursor: pointer;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 11px;
+        width: 1px;
+        background-color: #000;
+        z-index: 1;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 1px;
+        width: 11px;
+        background-color: #000;
+        z-index: 1;
+      }
+    }
+  }
+  // .orderblock__price
+  &__price {
+    max-width: 150px;
+    width: 100%;
+  }
+  &__dilevery {
+    font-size: 12px;
+  }
+  }
+  .container {
+  }
+  .ibg {
+  }
+  .orderblock-ended {
+    display: flex;
+    justify-content: space-between;
+    max-width: 350px;
+    width: 100%;
+    margin-left: auto;
+  }
+  
+// Style for =========================================================================
+
+
+.basket-issue {
+  @include ps;
+  font-weight: 300;
+  // .basket-issue__inner
+  &__inner {
+
+  }
+  // .basket-issue__top
+  &__top {
+    margin-bottom: 30px;
+  }
+  // .basket-issue__top-item
+  &__top-item {
+    font-size: 16px;
+  }
+  // .basket-issue__info
+  &__info {}
+  // .basket-issue__info-itew
+  &__info-itew {
+  }
+  // .basket-issue__info-cost
+  &__info-cost {
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  // .basket-issue__info-value
+  &__info-value {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  // .basket-issue__info-btn
+  &__info-btn {
+    // display: block;
+    max-width: 290px;
+    padding: 10px 50px;
+    font-size: 12px;
+    min-height: 50px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  &__info-agree {
+    max-width: 340px;
+    font-size: 12px;
+  }
+  }
+  .container {
+  }
+  .tab-title {
+    color: #000;
+    border-bottom: 1px solid #000;
+    transition: .3s;
+    & + & {
+      margin-left: 50px;
+    }
+    &:hover {
+      color: #555;
+      border-color: #555;
+    }
+  }
+  .active {
+  }
+  .tab-item {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  .btn {
+  }
+  
+// Style for MENU =========================================================================
