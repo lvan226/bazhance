@@ -87,10 +87,34 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	// Стилизация селектов
-	$('select').styler({
+	$('select, .styler-form-element *').styler({
 
 	});
 
+	// Выпадающее меню в фильтрах
+	$('.catalog-filter__dropdown-title').on('click', function() {
+		// var list = $(this + '+catalog-filter__dropdown-list');
+		$(this).next().toggleClass('active');
+		$(this).toggleClass('active');
+	});
+
+	// Стилизайи range-слайдера
+	$(".js-range-slider").ionRangeSlider({
+		type: "double",
+		min: 4500,
+		max: 7500,
+		step: 100,
+		// from: 5000,
+		// to: 6000,
+		onStart: function (data) {
+			$("#js-range-slider__from").val(data.from);
+			$("#js-range-slider__to").val(data.to);
+		},
+		onChange: function (data) {
+			$("#js-range-slider__from").val(data.from);
+			$("#js-range-slider__to").val(data.to);
+		},
+});
 });
 
 // function inputField(input, line) {

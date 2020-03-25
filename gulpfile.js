@@ -46,6 +46,7 @@ function scripts() {
 		'app/js/jquery-3.4.1.min.js', // npm vendor example (npm i --save-dev jquery)
 		'node_modules/slick-carousel/slick/slick.min.js',
 		'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
+		'app/js/ion.rangeSlider.min.js',
 		'app/js/app.js' // app.js. Always at the end
 		])
 	.pipe(concat('app.min.js'))

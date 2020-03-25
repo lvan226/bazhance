@@ -51,6 +51,7 @@ $grid-gutter-width: 20px;
 $gutter: $grid-gutter-width;
 
 
+
 // FONTS LOAD SECTION
 
 @mixin font($fname, $fstyle, $fweight, $furl, $furl2) {
@@ -187,11 +188,56 @@ a {
 	box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.25);
 	border-radius: 2px;
 	padding: 15px;
+	padding-right: 40px;
+	ul {
+		display: flex;
+		flex-direction: column;
+	}
 	li {
 		transition: .3s;
 		cursor: pointer;
+		font-size: 12px;
+		font-weight: 300;
+		&+li {
+			margin-top: 5px;
+		}
 		&:hover {
 			color: #555;
+		}
+	}
+}
+label {
+	margin-bottom: 0;
+}
+.jq-checkbox {
+	cursor: pointer;
+	&__div {
+		width: 10px;
+		height: 10px;
+		border: 1px solid #C4C4C4;
+		position: relative;
+		transition: .23s;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0px;
+			right: 0;
+			bottom: 0;
+			background-image: url(../images/dest/catalog/checked-jq.svg);
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			opacity: 0;
+			transition: .5s;
+		}
+	}
+	&.checked {
+		.jq-checkbox__div {
+			border-color: #000;
+		}
+		.jq-checkbox__div::after {
+			opacity: 1;
 		}
 	}
 }
@@ -206,5 +252,27 @@ a {
 .black-hover {
 	
 }
-
+.color-black,
+.color-neznayu1,
+.color-neznayu2,
+.color-neznayu3,
+.color-red {
+	width: 22px;
+	height: 22px;
+}
+.color-black {
+	background-color: #000;
+}
+.color-neznayu1 {
+	background-color: #C19A6B;
+}
+.color-neznayu2 {
+	background-color: #FFF8E7;
+}
+.color-neznayu3 {
+	background-color: #FFF6D4;
+}
+.color-red {
+	background-color: #F70D0D;
+}
 // Style for MAIN SLICK =========================================================================

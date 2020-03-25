@@ -1,7 +1,9 @@
 @import 'jquery.formstyler';
 @import 'config';
+@import 'ion.rangeSlider.min.scss';
 @import 'blocks/basket';
 @import 'blocks/contact';
+@import 'blocks/catalog';
 // CUSTOM USER STYLES & IMPORTS
 
 
@@ -622,7 +624,7 @@
   font-size: 14px;
   border-top: 1px solid #C4C4C4;
   padding-top: 50px;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
   // .footer__inner
   &__inner {
     display: flex;
