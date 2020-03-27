@@ -236,3 +236,255 @@
 &__input {}
 }
 // Смена пароля END ========================================================================
+
+
+
+
+// Мои заказы =================================================================
+.my-orders {
+  // .my-orders__info
+  &__info {
+    margin-bottom: 30px;
+    letter-spacing: 0.1em;
+    color: #555;
+    font-weight: 300;
+    font-size: 18px;
+    position: relative;
+  }
+  // .my-orders__title
+  &__title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #000000;
+  }
+  // .my-orders__number
+  &__number {
+    margin-bottom: 10px;
+  }
+  // .my-orders__status
+  &__status {
+ 
+  }
+  // .my-orders__return
+  &__return {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    width: 30px;
+    text-align: center;
+    transition: .3s;
+    width: 30px;
+    height: 30px;
+    display: block;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100%;
+      width: 1px;
+      background-color: #000;
+    }
+  }
+  // .my-orders__inner
+  &__inner {}
+  // .my-orders__orders-item
+  &__orders-item {}
+  }
+  .orderblock {
+  // .orderblock__close
+  &__close {}
+  // .orderblock__img
+  &__img {}
+  // .orderblock__content
+  &__content {}
+  // .orderblock__title
+  &__title {}
+  // .orderblock__subtitle
+  &__subtitle {}
+  // .orderblock__info
+  &__info {}
+  // .orderblock__color
+  &__color {}
+  // .orderblock__info-title
+  &__info-title {}
+  // .orderblock__color-type
+  &__color-type {}
+  // .orderblock__size
+  &__size {}
+  // .orderblock__info-count
+  &__info-count {}
+  // .orderblock__length
+  &__length {}
+  // .orderblock__country
+  &__country {}
+  // .orderblock__sum
+  &__sum {}
+  // .orderblock__sum-wrap
+  &__sum-wrap {}
+  // .orderblock__sum-count
+  &__sum-count {}
+  // .orderblock__price
+  &__price {}
+  }
+  .orderblock-type1 {
+  }
+  .ibg {
+  }
+  .orderblock-ended {
+  }
+  .orderblock-type2 {
+  }
+// Мои заказы END =================================================================
+
+
+// Мои подписки ====================================================================================== 
+.my-subscruptions {
+  // .my-subscruptions__info
+  &__info {}
+  // .my-subscruptions__title
+  &__title {
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    color: #000000;
+    margin-bottom: 30px;
+    font-weight: 300;
+  }
+  // .my-subscruptions__inner
+  &__inner {}
+  // .my-subscruptions__orders-item
+  &__orders-item {}
+  }
+  .orderblock {
+  // .orderblock__close
+  &__close {}
+  // .orderblock__img
+  &__img {}
+  // .orderblock__content
+  &__content {}
+  // .orderblock__title
+  &__title {}
+  // .orderblock__subtitle
+  &__subtitle {}
+  // .orderblock__info
+  &__info {}
+  // .orderblock__color
+  &__color {}
+  // .orderblock__info-title
+  &__info-title {}
+  // .orderblock__color-type
+  &__color-type {}
+  // .orderblock__size
+  &__size {}
+  // .orderblock__info-count
+  &__info-count {}
+  // .orderblock__length
+  &__length {}
+  // .orderblock__country
+  &__country {}
+  // .orderblock__sum
+  &__sum {}
+  // .orderblock__sum-wrap
+  &__sum-wrap {}
+  // .orderblock__sum-count
+  &__sum-count {}
+  // .orderblock__price
+  &__price {}
+  }
+  .orderblock-type1 {
+  }
+  .ibg {
+  }
+  .color-black {
+  }
+  .orderblock-ended {
+  }
+  .orderblock-type2 {
+  }
+  .color-red {
+  }
+// Мои подписки END ====================================================================================== 
+
+
+
+// Избранные товары ======================================================================
+.profile-favorites {
+  @include ps;
+  // .profile-favorites__inner
+  .productblock {
+    &__imagebox {
+      min-height: 530px;
+    }
+  }
+  &__inner {}
+  // .profile-favorites__row
+  &__row {
+    display: flex;
+    margin: 0 -15px;
+    margin-bottom: -50px;
+    flex-wrap: wrap;
+  }
+  // .profile-favorites__col
+  &__col {
+    width: calc(33.333% - 30px);
+    margin: 0 15px;
+    margin-bottom: 50px;
+  }
+  }
+  .container {
+  }
+  .productblock {
+  // .productblock__imagebox
+  &__imagebox {}
+  // .productblock__imagebox-new
+  &__imagebox-new {}
+  // .productblock__imagebox-heart
+  &__imagebox-heart {}
+  // .productblock__imagebox-sizewrap
+  &__imagebox-sizewrap {}
+  // .productblock__imagebox-size
+  &__imagebox-size {}
+  // .productblock__imagebox-btn
+  &__imagebox-btn {}
+  // .productblock__info
+  &__info {}
+  // .productblock__info-name
+  &__info-name {}
+  // .productblock__info-country
+  &__info-country {}
+  // .productblock__info-pricewrap
+  &__info-pricewrap {}
+  // .productblock__info-colortext
+  &__info-colortext {}
+  // .productblock__info-colors
+  &__info-colors {}
+  }
+  .color-neznayu1 {
+  }
+  .color-neznayu2 {
+  }
+  .color-neznayu3 {
+  }
+  .color-black {
+  }
+  .color-red {
+  }
+// Избранные товары END ======================================================================

@@ -1,0 +1,200 @@
+.like {
+  @include ps;
+  // .like__inner
+  &__inner {
+
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    margin-bottom: -50px;
+  }
+  &__col {
+    width: calc(33% - 30px);
+    margin: 0 15px;
+    margin-bottom: 50px;
+  }
+  }
+  .container {
+  }
+  .productblock {
+  // .productblock__imagebox
+  &__imagebox {
+    min-height: 710px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+  }
+  // .productblock__imagebox-new
+  &__imagebox-new {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #171717;
+    padding: 11px 10px;
+    max-width: 127px;
+    text-align: center;
+  }
+  // .productblock__imagebox-heart
+  &__imagebox-heart {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    label {
+      width: 24px;
+      /* Ширина рисунка */
+      height: 22px;
+      /* Высота рисунка */
+      display: block;
+      /* Блочный элемент */
+      position: relative;
+      /* Относительное позиционирование */
+    }
+    
+    input[type="checkbox"]+span {
+      position: absolute;
+      /* Абсолютное позиционирование */
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url(../images/dest/like/heart-sprite.png) no-repeat;
+      /* Фоновый рисунок */
+      cursor: pointer;
+      /* Курсор в виде руки */
+    }
+    
+    input[type="checkbox"]:checked+span {
+      background-position: 0 -22px;
+    }
+    input[type="checkbox"] {
+      display: none;
+    }
+  }
+  // .productblock__imagebox-sizewrap
+  &__imagebox-sizewrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(#BDBDBD, 0.7);
+    min-height: 50px;
+    transition: .4s;
+    width: 100%;
+    label {
+      & + label {
+        margin-left: 19px;
+      }
+      display: block;
+      /* Блочный элемент */
+      position: relative;
+      /* Относительное позиционирование */
+    }
+    
+    input[type="radio"]+ span  {
+      
+    }
+    input[disabled]+ span,
+    input:disabled+span  {
+      color: #555;
+      cursor: auto;
+    }
+    input[type="radio"]:checked+span {
+      font-weight: 500;
+    }
+    input[type="radio"] {
+      display: none;
+    }
+  }
+  //productblock__size 
+  &__size {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #000000;
+    cursor: pointer;
+    transition: .34s;
+    &:hover {
+      
+    }
+  }
+  // .productblock__imagebox-size
+  &__imagebox-size {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #000000;
+    cursor: pointer;
+  }
+  // .productblock__imagebox-btn
+  &__imagebox-btn {
+    border: none;
+    background-color: #171717;
+    font-weight: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    display: block;
+    padding: 15px 10px;
+    transition: .4s;
+    display: block;
+    width: 100%;
+  }
+  // .productblock__info
+  &__info {
+    text-align: center;
+    line-height: 160%;
+    font-weight: 300;
+    padding-top: 20px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  // .productblock__info-name
+  &__info-name {
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: #000000;
+  }
+  // .productblock__info-country
+  &__info-country {}
+  // .productblock__info-pricewrap
+  &__info-pricewrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  // .productblock__info-colors
+  &__info-colors {
+    display: flex;
+    margin-left: 30px;
+    & > a {
+      cursor: pointer;
+      display: block;
+      & + a {
+        margin-left: 10px;
+      }
+    }
+  }
+  &__info-colortext {
+    font-size: 18px;
+    span {
+      text-transform: uppercase;
+      margin-left: 5px;
+    }
+  }
+}
