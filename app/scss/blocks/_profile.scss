@@ -1,0 +1,238 @@
+// Страница профиля входная =========================================================
+.profile {
+  @include ps;
+  // .profile__inner
+  &__inner {
+    display: flex;
+  }
+  // .profile__nav
+  &__nav {
+    max-width: 420px;
+    width: 100%;
+    margin-right: 30px;
+  }
+  // .profile__nav-list
+  &__nav-list {
+
+  }
+  &__nav-item {
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    transition: .4s;
+    &:hover {
+      padding-left: 15px;
+    }
+    a {
+      color: #555;
+    }
+    &.active {
+      a {
+        color: #000;
+      }
+      padding-left: 15px;
+    }
+    & + & {
+      margin-top: 30px;
+    } 
+  }
+  // .profile__content
+  &__content {
+    width: 100%;
+  }
+  }
+  .container {
+  }
+  .profile-enter {
+  // .profile-enter__inner
+  &__inner {
+    max-width: 1170px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: #000;
+  }
+  // .profile-enter__title
+  &__title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  // .profile-enter__box
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+  // .profile-enter__item
+  &__item {
+    max-width: calc(25% - 10px);
+  }
+  // .profile-enter__contact
+  &__contact {}
+  // .profile-enter__item-title
+  &__item-title {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+  // .profile-enter__item-text
+  &__item-text {
+    color: #555;
+    & + & {
+      margin-top: 20px;
+    }
+  }
+  // .profile-enter__edit
+  &__edit {
+    margin-top: 60px;
+    font-size: 18px;
+    margin-left: 31px;
+    position: relative;
+    border-bottom: 1px solid #000;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -31px;
+      top: 0;
+      background-image: url(../images/dest/registration/pancil.png);
+      width: 21px;
+      height: 21px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  }
+// Страница профиля входная END=========================================================
+
+// Редактирование профиял ==============================================================
+.profile-edit {
+  font-weight: 300;
+  input {
+    color: #000;
+    &::placeholder {
+      color: #555;
+    }
+  }
+  // .profile-edit__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  // .profile-edit__address
+  &__address {
+    max-width: 570px;
+    width: 100%;
+  }
+  // .profile-edit__personal
+  &__personal {
+    max-width: 570px;
+    width: 100%;
+  }
+  // .profile-edit__btn
+  &__btn {
+    max-width: 290px;
+    width: 100%;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    &-wrap {
+      display: flex;
+      justify-content: space-between;
+      max-width: 720px;
+      align-items: center;
+      margin-top: 50px;
+    }
+  }
+  // .profile-edit__agree
+  &__agree {
+    font-size: 12px;
+    margin-left: 30px;
+    display: flex;
+    a {
+      border-bottom: 1px solid #000;
+      color: #000;
+    }
+  }
+  &__title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+  }
+  }
+  .formblock-form {
+  // .formblock-form__line
+  &__line {
+    &-check {
+      margin-bottom: 40px;
+    }
+    &-flex {
+      display: flex;
+      justify-content: space-between;
+      .field-style__input  {
+        width: calc(50% - 15px);
+      }
+    }
+  }
+  // .formblock-form__link
+  &__link {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1;
+    display: inline-block;
+    color: #000000;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #000;
+    padding: 0;
+    padding-bottom: 2px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  }
+  .field-style {
+  
+  // .field-style__input
+  &__input {
+    width: calc(100% - 15px);
+  }
+  }
+  .input-checkbox {
+  }
+  .catalog-item {
+  // .catalog-item__size
+  &__size {}
+  }
+  .btn {
+  }
+// Редактирование профиял END ==============================================================
+
+// Смена пароля ========================================================================
+.change-password {
+  max-width: 570px;
+  &__btn {
+    padding: 15px 60px;
+    background-color: #000;
+    border: none;
+    font-weight: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 20px;
+  }
+}
+.formblock-form {
+// .formblock-form__line
+&__line {}
+}
+.profile-edit {
+// .profile-edit__title
+&__title {}
+}
+.field-style {
+// .field-style__input
+&__input {}
+}
+// Смена пароля END ========================================================================

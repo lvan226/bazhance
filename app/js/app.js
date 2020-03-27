@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	// Стилизация селектов
-	$('select, .styler-form-element *').styler({
+	$('select, .styler-form-element *, .input-checkbox *').styler({
 
 	});
 

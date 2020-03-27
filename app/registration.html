@@ -36,7 +36,7 @@
         </div>
       </div>
       <div class="filter-bg"></div>
-      <!-- Шапка END -->
+      <!-- Шапка -->
       <header class="header">
         <div class="menu">
           <div class="container">
@@ -76,9 +76,11 @@
                     <!-- <button class="btn">Отправить</button> -->
                   </form>
                 </div>
-                <a href="user.html" class="menu__user"></a>
-                <a href="like.html" class="menu__like menu__link menu__link-empty"><span class="menu__link-count">99</span></a>
-                <a href="basket.html" class="menu__basket menu__link active"><span class="menu__link-count">01</span></a>
+                <a href="profile.html" class="menu__user"></a>
+                <a href="like.html" class="menu__like menu__link menu__link-empty"><span
+                    class="menu__link-count">99</span></a>
+                <a href="basket.html" class="menu__basket menu__link active"><span
+                    class="menu__link-count">01</span></a>
                 <a href="" class="language">
                   RUS
                 </a>
@@ -109,11 +111,84 @@
       <!-- /.breadcrumbs -->
       <!-- Хлебные крошки END-->
 
+      <!-- Блок регистрации и входа -->
       <div class="registration-block">
-        <div class="inputblock"></div>
+        <div class="container">
+          <div class="registration-block__inner">
+            <div class="inputblock">
+              <div class="inputblock__title">Вход</div>
+              <form>
+                <div class="field-style__input">
+                  <input type="text" placeholder="E-mail">
+                </div>
+                <div class="field-style__input">
+                  <input type="text" placeholder="Пароль">
+                </div>
+                <a class="forgot-link" href="">Забыли пароль?</a>
+                <div class="inputblock__info">
+                  <button class="inputblock__info-btn btn">Войти</button>
+                  <div class="inputblock__info-social">
+                    <span>Войти с помощью</span>
+                    <a href=""><img src="images/dest/registration/gmail-icon.svg" alt=""></a>
+                    <a href=""><img src="images/dest/registration/facebook-icon.svg" alt=""></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- /.inputblock -->
+            <div class="registrblock">
+              <div class="registrblock__title">Регистрация</div>
+              <form>
+                <div class="field-style__input">
+                  <input type="text" placeholder="Имя">
+                </div>
+                <div class="field-style__input">
+                  <input type="text" placeholder="E-mail">
+                </div>
+                <div class="field-style__input">
+                  <input type="text" placeholder="Пароль">
+                </div>
+                <div class="field-style__input">
+                  <input type="text" placeholder="Подтверждение пароля">
+                </div>
+                <div class="registrblock__alert">
+                  <span>Я хочу быть в курсе акций и поступлений</span>
+                  <label class="input-checkbox">
+                    <input name="registration-alert" type="radio">
+                    <span class="catalog-item__size">Да</span>
+                  </label>
+                  <label class="input-checkbox">
+                    <input name="registration-alert" type="radio">
+                    <span class="catalog-item__size">Нет</span>
+                  </label>
+                </div>
+                <div class="registrblock__info">
+                  <button class="registrblock__info-btn btn">Зарегистрироваться</button>
+                  <div class="registrblock__info-text">
+                    Нажимая Зарегистрироваться я принимаю
+                    <a href="conf.html">Политику Конфиденциальности</a>
+                  </div>
+                </div>
+                <div class="registrblock__social">
+                  <span>Зарегистрироваться с помощью</span>
+                  <div class="registblock__social-links">
+                    <a href=""><img src="images/dest/registration/gmail-icon.svg" alt=""></a>
+                    <a href=""><img src="images/dest/registration/facebook-icon.svg" alt=""></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- /.registrblock -->
+          </div>
+          <!-- /.registration-block__inner -->
+        </div>
+        <!-- /.container -->
       </div>
+      <!-- Блок регистрации и входа -->
+
 
     </div>
+    <!-- wrapper-page__content -->
     <div class="wrapper-page__footer">
 
       <!-- Подвал сайта -->

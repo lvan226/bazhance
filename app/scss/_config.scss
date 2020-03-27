@@ -105,6 +105,7 @@ body {
 	line-height: 1.4;
 	overflow-x: hidden;
 	color: $textcolor;
+	letter-spacing: 0;
 }
 
 img {
@@ -209,38 +210,41 @@ a {
 label {
 	margin-bottom: 0;
 }
-.jq-checkbox {
-	cursor: pointer;
-	&__div {
-		width: 10px;
-		height: 10px;
-		border: 1px solid #C4C4C4;
-		position: relative;
-		transition: .23s;
-		&::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0px;
-			right: 0;
-			bottom: 0;
-			background-image: url(../images/dest/catalog/checked-jq.svg);
-			background-size: contain;
-			background-position: center;
-			background-repeat: no-repeat;
-			opacity: 0;
-			transition: .5s;
+.catalog-page-style {
+	.jq-checkbox {
+		cursor: pointer;
+		&__div {
+			width: 10px;
+			height: 10px;
+			border: 1px solid #C4C4C4;
+			position: relative;
+			transition: .23s;
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0px;
+				right: 0;
+				bottom: 0;
+				background-image: url(../images/dest/catalog/checked-jq.svg);
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+				opacity: 0;
+				transition: .5s;
+			}
 		}
-	}
-	&.checked {
-		.jq-checkbox__div {
-			border-color: #000;
-		}
-		.jq-checkbox__div::after {
-			opacity: 1;
+		&.checked {
+			.jq-checkbox__div {
+				border-color: #000;
+			}
+			.jq-checkbox__div::after {
+				opacity: 1;
+			}
 		}
 	}
 }
+
 // Style for MAIN SLICK =========================================================================
 .slick-list {
 	overflow: hidden;
@@ -276,3 +280,80 @@ label {
 	background-color: #F70D0D;
 }
 // Style for MAIN SLICK =========================================================================
+
+
+.input-checkbox {
+	display: flex;
+	align-items: center;
+	.jq-radio {
+		margin-right: 10px;
+		cursor: pointer;
+		&__div {
+			width: 20px;
+			height: 20px;
+			border: 0.5px solid #000000;
+			transition: .3s;
+			&::before {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 13px;
+				height: 9px;
+				background-image: url(../images/dest/registration/checked.svg);
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				opacity: 0;
+				transition: .35s;
+			}
+		}
+		&.checked {
+			.jq-radio__div {
+				&::before {
+					opacity: 1;
+				}
+			}
+
+		}
+	}
+	.jq-checkbox {
+		margin-right: 10px;
+		cursor: pointer;
+		&__div {
+			width: 20px;
+			height: 20px;
+			border: 0.5px solid #000000;
+			transition: .3s;
+			&::before {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 13px;
+				height: 9px;
+				background-image: url(../images/dest/registration/checked.svg);
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				opacity: 0;
+				transition: .35s;
+			}
+		}
+		&.checked {
+			.jq-checkbox__div {
+				&::before {
+					opacity: 1;
+				}
+			}
+
+		}
+	}
+}
+
+// <label class="input-checkbox">
+// 	<input name="registration-alert" type="radio">
+// 	<span class="catalog-item__size">Да</span>
+// </label>
