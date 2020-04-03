@@ -13,6 +13,8 @@
     left: auto;
     right: 0px;
     transition: .3s;
+    cursor: pointer;
+    z-index: 4;
     svg {
       display: block;
     }
@@ -22,6 +24,7 @@
     background-color: transparent;
     padding: 0;
     transition: .3s;
+
     // padding-bottom: 3px;
     &::placeholder {
       transition: .25s ease-out;

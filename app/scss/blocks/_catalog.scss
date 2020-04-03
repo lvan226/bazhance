@@ -23,6 +23,11 @@
     text-transform: uppercase;
     color: #555;
     cursor: pointer;
+    transition: .35s;
+    &:hover {
+      padding-left: 14px;
+      color: #000;
+    }
     &_active {
       padding-left: 14px;
       color: #000;
@@ -288,12 +293,11 @@
     position: absolute;
     left: 20px;
     top: 20px;
-
     font-size: 18px;
     text-transform: uppercase;
     color: #fff;
     background-color: #171717;
-    padding: 11px 10px;
+    padding: 11px 40px;
     max-width: 127px;
     text-align: center;
   }
@@ -339,7 +343,7 @@
     text-transform: uppercase;
     color: #000000;
     cursor: pointer;
-    transition: .34s;
+    transition: .34s; 
     &:hover {
       
     }

@@ -1,0 +1,164 @@
+// FAQ ==========================================================
+.faqblock {
+  @include ps;
+  font-weight: 300;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: #000;
+  p {
+    margin-bottom: 30px;
+  }
+  h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+  }
+  a:not(.faq__text-link) {
+    color: #000;
+    border-bottom: 1px solid #000;
+    transition: .3s;
+    &:hover {
+      color: #555;
+      border-color: #555;
+    }
+  }
+}
+.container {
+}
+.faq {
+// .faq__inner
+&__inner {}
+// .faq__row
+&__row {
+  // margin-bottom: -100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+// .faq__col
+&__col {
+  margin-bottom: 100px;
+  width: 30%;
+}
+// .faq__links
+&__links {
+  font-size: 16px;
+  color: #000;
+  a + a {
+    margin-left: 50px;
+  }
+}
+}
+// FAQ END ==========================================================
+
+// Информация об оплате =============================================
+.faqblock {
+}
+.information-pay {
+  .faq__col {
+    margin-bottom: 0;
+  }
+}
+.container {
+}
+.faq {
+  strong {
+    font-weight: 400;
+  }
+  &__textwrap {
+    max-width: 720px;
+  }
+// .faq__list
+&__list {
+  padding: 0;
+  margin: 0;
+  li {
+    display: block;
+  }
+  &-line {
+    text-indent: 34px;
+    li {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 12px;
+        width: 18px;
+        height: 1px;
+        border-radius: 50%;
+        background-color: #000;
+      }
+    }
+  }
+  &-dots {
+    text-indent: 22px;
+    li {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 6px;
+        top: 14px;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: #000;
+      }
+    }
+  }
+}
+// .faq__inner
+&__inner {}
+// .faq__row
+&__row {}
+// .faq__text
+&__text {}
+// .faq__col
+&__col {}
+// .faq__links
+&__links {}
+}
+.col-6 {
+  margin-bottom: 100px;
+  width: 48%;
+  margin-bottom: 100px;
+  max-width: 815px;
+}
+// Информация об оплате END =============================================
+
+// Условия доставки ====================================================
+.condition-return {
+  .faq__inner {
+    margin-bottom: -135px;
+  }
+}
+// Условия доставки END ================================================
+
+// Помощь стилиста ====================================================
+.faq__text-link {
+  font-weight: 400;
+}
+.stylist-help__contact {
+  a {
+    padding-left: 35px;
+    position: relative;
+    border: none !important;
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+    img {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    & + a {
+      margin-top: 10px;
+    }
+  }
+}
+// Помощь стилиста END ====================================================

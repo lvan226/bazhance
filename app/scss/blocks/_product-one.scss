@@ -1,0 +1,209 @@
+// Продукт и вся информация о нем, оформить END ============================================================  
+.product-one {
+  @include ps;
+
+  // .product-one__inner
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  // .product-one__slider
+  &__slider {}
+
+  // .product-one__slider-item
+  &__slider-item {}
+
+  // .product-one__image
+  &__image {
+    min-height: 900px;
+    max-width: 720px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 30px;
+  }
+
+  // .product-one__info
+  &__info {
+    font-weight: 300;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #000;
+  }
+
+  // .product-one__info-heading
+  &__info-heading {
+    margin-bottom: 10px;
+  }
+
+  // .product-one__info-colors
+  &__info-colors {
+    margin-bottom: 30px;
+    a {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.container {}
+
+.productone-info {
+  max-width: 580px;
+  width: 100%;
+  // .productone-info__title
+  &__title {
+    font-weight: normal;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    margin-bottom: 40px;
+    max-width: 520px;
+  }
+
+  // .productone-info__size
+  &__size {
+    margin-bottom: 30px;
+  }
+
+  // .productone-info__row
+  &__row {
+    display: flex;
+  }
+
+  // .productone-info__size-list
+  &__size-list {}
+
+  // .productone-info__col
+  &__col {
+    width: 50%;
+  }
+
+  // .productone-info__size-item
+  &__size-item {}
+
+  // .productone-info__size-links
+  &__size-links {}
+
+  // .productone-info__length
+  &__length {
+    margin-bottom: 30px;
+  }
+
+  // .productone-info__length-list
+  &__length-list {}
+
+  // .productone-info__length-item
+  &__length-item {}
+
+  // .productone-info__country
+  &__country {}
+
+  // .productone-info__country-list
+  &__country-list {}
+
+  // .productone-info__country-item
+  &__country-item {}
+
+  // .productone-info__price
+  &__price {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  // .productone-info__form
+  &__form {
+    margin-bottom: 50px;
+    button {
+      border: none;
+      background-color: #000;
+      color: #fff;
+      font-weight: normal;
+      font-size: 12px;
+      text-align: center;
+      margin-right: 10px;
+    }
+  }
+
+  // .productone-info__form-order
+  .productone-info__form-order {
+    padding: 16px 40px;
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+  }
+
+  // .productone-info__form-basket
+  .productone-info__form-basket {
+    padding: 16px 40px;
+  }
+
+  // .productone-info__form-like
+  &__form-like {
+    max-width: 50px;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url(../images/dest/product-one/heart.png);
+      width: 22px;
+      height: 20px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    img {
+      display: block;
+    }
+  }
+
+  // .productone-info__tab-title
+  &__tab-title {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000;
+    justify-content: space-between;
+    div {
+      font-size: 18px;
+      line-height: 1.2;  
+      color: #555555;
+      padding: 0 40px;
+    }
+  }
+
+  // .productone-info__tab-content
+  &__tab-content {
+    padding-top: 17px;
+    div {
+      font-size: 16px;
+      display: none;
+      &.active-tab {
+        display: block;
+      }
+    }
+  }
+}
+
+.product-info {
+
+  // .product-info__heading
+  &__heading {}
+}
+
+.color-black {}
+
+.color-neznayu1 {}
+
+.color-neznayu2 {}
+
+.color-neznayu3 {}
+
+.active-tab {}
+
+// Продукт и вся информация о нем, оформить END ============================================================  
