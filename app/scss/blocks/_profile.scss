@@ -494,7 +494,7 @@
   @include ps;
   font-weight: 300;
   font-size: 18px;
-  line-height: 160%;
+  // line-height: 160%;
   letter-spacing: 0.1em;
   color: #000000;
 
@@ -519,6 +519,7 @@
 
 // Публичная оферта =================================================================================
 .conf {
+  line-height: 1.6;
   // .conf__inner
   &__inner {}
   // .conf__list

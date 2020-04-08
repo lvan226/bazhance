@@ -101,7 +101,7 @@
           <div class="breadcrumbs__inner">
             <ul class="breadcrumbs__list">
               <li><a href="index.html">Bazhane</a></li>
-              <li><a>Каталог</a></li>
+              <li><a href="catalog.html">Каталог</a></li>
               <li><span>Пальто</span></li>
             </ul>
           </div>
@@ -118,7 +118,33 @@
           <div class="product-one__inner">
             <div class="product-one__slider">
               <div class="product-one__slider-item">
-
+                <div class="product-one__slider-image"
+                  style="background-image: url(images/dest/catalog/catalog-item1.jpg);"></div>
+              </div>
+              <!-- /.product-one__slider-item -->
+              <div class="product-one__slider-item">
+                <div class="product-one__slider-image"
+                  style="background-image: url(images/dest/catalog/catalog-item2.jpg);"></div>
+              </div>
+              <!-- /.product-one__slider-item -->
+              <div class="product-one__slider-item">
+                <div class="product-one__slider-image"
+                  style="background-image: url(images/dest/catalog/catalog-item3.jpg);"></div>
+              </div>
+              <!-- /.product-one__slider-item -->
+              <div class="product-one__slider-item">
+                <div class="product-one__slider-image"
+                  style="background-image: url(images/dest/catalog/catalog-item4.jpg);"></div>
+              </div>
+              <!-- /.product-one__slider-item -->
+              <div class="product-one__slider-item">
+                <div class="product-one__slider-image"
+                  style="background-image: url(images/dest/catalog/catalog-item2.jpg);"></div>
+              </div>
+              <!-- /.product-one__slider-item -->
+              <div class="product-one__slider-item">
+                <div class="product-one__slider-image"
+                  style="background-image: url(images/dest/catalog/catalog-item3.jpg);"></div>
               </div>
               <!-- /.product-one__slider-item -->
             </div>
@@ -129,7 +155,7 @@
             <div class="product-one__info productone-info">
               <div class="productone-info__title">Пальто со спущенным рукавом
                 прямого кроя Чёрный 1,15м Италия</div>
-              <div class="product-info__heading">Размер</div>
+              <div class="product-one__info-heading">Размер</div>
               <div class="productone-info__size productone-info__row">
                 <div class="productone-info__size-list productone-info__col">
                   <label class="productone-info__size-item">
@@ -160,19 +186,23 @@
                     <input name="product1-name" type="radio" value="54">
                     <span>54</span>
                   </label>
+                  <label class="productone-info__size-item">
+                    <input name="product1-name" type="radio" value="54">
+                    <span>56</span>
+                  </label>
                 </div>
                 <div class="productone-info__size-links productone-info__col">
-                  <a href="">Размерная сетка</a>
-                  <a href="">Помощь стилиста</a>
+                  <div><a href="">Размерная сетка</a></div>
+                  <div><a href="stylist-help.html">Помощь стилиста</a></div>
                 </div>
               </div>
               <!-- /.productone-info__size -->
               <div class="product-one__info-heading">Цвет</div>
               <div class="product-one__info-colors">
-                <a href="#" class="color-black"></a>
-                <a href="#" class="color-neznayu1"></a>
-                <a href="#" class="color-neznayu2"></a>
-                <a href="#" class="color-neznayu3"></a>
+                <div class="active-color"><a href="#" class="color-black"></a></div>
+                <div><a href="#" class="color-neznayu1"></a></div>
+                <div><a href="#" class="color-neznayu2"></a></div>
+                <div><a href="#" class="color-neznayu3"></a></div>
               </div>
               <div class="productone-info__row">
                 <div class="productone-info__length productone-info__col">
@@ -213,16 +243,16 @@
               </div>
               <!-- /.productone-info__row -->
               <div class="productone-info__tab-title">
-                <div>Описание</div>
-                <div>Состав и размер</div>
-                <div class="active-tab">Доставка</div>
+                <div data-tab="1" class="tabs-title">Описание</div>
+                <div data-tab="2" class="tabs-title">Состав и размер</div>
+                <div data-tab="3" class="tabs-title active-tab">Доставка</div>
               </div>
               <div class="productone-info__tab-content">
-                <div>
+                <div data-tab="1">
                   Прямой крой под пояс, без пуговиц, отложной воротник с лацканами, врезные карманы
                   по боковым швам, с подкладкой.
                 </div>
-                <div>
+                <div data-tab="2">
                   60% ШЕРСТИ. 35% АКРИЛА, 5% СМЕСЕВЫЕ ВОЛОКНА
 
                   Это высококачественная пальтовая ткань турецкого производства с содержанием шерсти 60%.
@@ -230,7 +260,7 @@
                   Теплый (подходит до температуры +5C).
                   С использованием утеплителя "Слимтекс" - до -5/-10 С.
                 </div>
-                <div class="active-tab">
+                <div data-tab="3" class="active-tab">
                   Доставка осуществляется за счёт покупателя согласно тарифов компании «Новая
                   Почта». Доставка оплачивается при получении заказа.
                 </div>
