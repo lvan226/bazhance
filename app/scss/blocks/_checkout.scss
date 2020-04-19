@@ -77,7 +77,6 @@
    &__title {
       font-size: 24px;
       line-height: 1.6;
-      letter-spacing: 0.1em;
       color: #000000;
       margin-bottom: 30px;
    }
@@ -116,7 +115,6 @@
          font-weight: normal;
          font-size: 18px;
          line-height: 1.6;
-         letter-spacing: 0.1em;
          color: #555555;
          margin-bottom: 10px;
       }
@@ -124,7 +122,6 @@
          font-weight: 300;
          font-size: 14px;
          line-height: 1.6;
-         letter-spacing: 0.1em;
          color: #555555;         
       }
    }
@@ -163,7 +160,6 @@
       font-weight: 300;
       font-size: 18px;
       line-height: 1.6;
-      letter-spacing: 0.1em;
    }
    // .checkout-page__mapblock-mode
    &__mapblock-mode {
@@ -191,7 +187,6 @@
       font-weight: 300;
       font-size: 16px;
       line-height: 1.6;
-      letter-spacing: 0.1em;
       text-decoration-line: underline;
       color: #000000;
       margin-top: 15px;
@@ -254,14 +249,11 @@
    }
    // .checkout-tab__content
    &__content {
-      max-height: 0;
-      max-width: 0;
-      overflow: hidden;
+      display: none;
       padding: 0;
       transition: .35s;
       &.tab-active {
-         max-height: 800px;
-         max-width: 100%;
+         display: flex;
       }
    }
    }

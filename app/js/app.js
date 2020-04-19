@@ -101,8 +101,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	// Стилизайи range-слайдера
 	$(".js-range-slider").ionRangeSlider({
 		type: "double",
-		min: 4500,
-		max: 7500,
 		step: 100,
 		// from: 5000,
 		// to: 6000,
@@ -115,6 +113,34 @@ document.addEventListener("DOMContentLoaded", function() {
 			$("#js-range-slider__to").val(data.to);
 		},
 	});
+
+	var $ionSlider = $(".js-range-slider").data("ionRangeSlider");
+
+	// Значение из input в слайдер
+	$('#js-range-slider__from').on('change', function(){
+		$ionSlider
+      .update({
+        // from_min: this.value,
+        from: this.value
+      });
+	});
+	$('#js-range-slider__to').on('change', function(){
+		$ionSlider
+      .update({
+        // from_min: this.value,
+        to: this.value
+      });
+	});
+
+
+	// Кнопка фильтры в каталоге на мобильных устройствах
+	$('#catalog__filter-btnmobile').on('click', function() {
+		$('#catalog-filter').addClass('active');
+	});
+	$('.filter-mobile__btn').on('click', function() {
+		$('#catalog-filter').removeClass('active');
+	});
+
 
 	// ТАБЫ для одного товара
 	$('.productone-info__tab-title > div').on('click', function() {
@@ -134,6 +160,64 @@ document.addEventListener("DOMContentLoaded", function() {
 		infinite: true,
 		prevArrow: '<button class="slick-prev slick-arrow" type="button" style=""><img src="images/dest/product-one/arrow-slider-top.png" alt=""></button>',
 		nextArrow: '<button class="slick-next slick-arrow" type="button" style=""><img src="images/dest/product-one/arrow-slider-bottom.png" alt=""></button>',
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 1,
+					vertical: false,
+					verticalSwiping: false,
+					// variableWidth: true,
+					arrows: false,
+					dots: true,
+				}
+			},
+		]
+	});
+
+	// Слайдер на странице товара
+	$('.productpage-slider').slick({
+		// centerMode: true,
+		infinite: true,
+		slidesToShow: 5,
+		prevArrow: '<button class="slick-prev slick-arrow" type="button" style=""><img src="images/dest/product-one/arrow-big.svg" alt=""></button>',
+		nextArrow: '<button class="slick-next slick-arrow" type="button" style=""><img src="images/dest/product-one/arrow-big.svg" alt=""></button>',
+		responsive: [
+			{
+				breakpoint: 1850,
+				settings: {
+					slidesToShow: 4,
+					variableWidth: true,
+				}
+			},
+			{
+				breakpoint: 1365,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+					infinite: false,
+					variableWidth: true,
+				}
+			},
+		]
 	});
 
 	// Табы на странице оформление заказа
@@ -154,6 +238,16 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+	// Табы в блоке регистрация
+	$('.inputblock__title').on("click", function() {
+		$('.inputblock').addClass('active');
+		$('.registrblock').removeClass('active');
+	});
+
+	$('.registrblock__title').on("click", function() {
+		$('.registrblock').addClass('active');
+		$('.inputblock').removeClass('active');
+	});
 });
 
 // function inputField(input, line) {

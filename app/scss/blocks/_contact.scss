@@ -73,3 +73,34 @@
   .container {
   }
   
+
+@media (max-width: $lgh) {
+  .contact-map__info {
+    padding: 40px 32px 45px 40px;
+    top: 150px;
+  }
+  .contact-map__inner {
+    height: 600px;
+  }
+}
+@media (max-width: $md) {
+  .contact-map__info {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    padding-left: 0;
+    padding-top: 30px;
+  }
+  .contact-map__inner {
+    height: 100%;
+  }
+  .contact-map__info-map {
+    margin-left: calc(((100vw - 100%)/ 2) * -1);
+    margin-right: calc(((100vw - 100%)/ 2) * -1);
+    width: 100vw;
+    height: calc(100vw / 1.89);
+    min-height: 190px;
+  }
+}

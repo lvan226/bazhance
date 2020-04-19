@@ -16,6 +16,7 @@
 .breadcrumbs {
   padding: 50px 0 80px;
   font-size: 18px;
+  @media (max-width: $sm) {padding: 20px 0px 60px;font-size: 16px;}
   // .breadcrumbs__inner
   &__inner {
     font-weight: 300;
@@ -29,6 +30,7 @@
     li+li {
       padding-left: 60px;
       position: relative;
+      @media (max-width: $sm) {padding-left: 40px;}
       &:before {
         content: "";
         position: absolute;
@@ -38,6 +40,7 @@
         background-size: cover;
         width: 30px;
         height: 8px;
+        @media (max-width: $sm) {width: 20px;background-size: contain;background-repeat: no-repeat;left: 8px;}
       }
     }
   }
@@ -61,8 +64,15 @@
   padding: 50px 0 20px;
   text-align: center;
   // display: block;
-  @media (max-width: $md) {margin: 0 auto;padding: 20px 0;position: absolute;left: 0;right: 0;width: 100%;}
-  @media (max-width: $xs) {max-width: 240px;}
+  @media (max-width: $md) {margin: 0 auto;padding: 20px 0;position: relative;left: 0;right: 0;width: 100%;border-bottom: 1px solid #000;padding-right: 30px;padding-left: 30px;}
+  @media (max-width: $xs) {}
+}
+.logo-con.container {
+  @media (max-width: $md) {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
 
 
@@ -142,6 +152,8 @@
     transition: .4s;
     @media (max-width: $md) {
       display: block;
+      font-size: 24px;
+      text-transform: uppercase;
     }
     &.active {
       border-color: #000;

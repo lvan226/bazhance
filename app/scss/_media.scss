@@ -81,7 +81,7 @@
   }
   .logo {
     z-index: 300;
-    position: absolute;
+    position: relative;
     svg > g {
       transition: .3s;
     }
@@ -92,8 +92,10 @@
     }
   }
   .menu__list-item.active {
-    border-color: #fff;
-    border-width: 2px;
+    border: none;
+    a {
+      color: #fff !important;
+    }
   }
   .menu {
     border-top: 1px solid #000;
@@ -172,7 +174,7 @@
       opacity: 1;
     }
     .menu__list-item a {
-      color: #fff;
+      color: #c4c4c4;
       padding-bottom: 10px;
     }
   }

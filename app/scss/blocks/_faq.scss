@@ -5,7 +5,6 @@
   font-size: 18px;
   line-height: 1.6;
   font-weight: 300;
-  letter-spacing: 0.1em;
   color: #000;
   p {
     margin-bottom: 30px;
@@ -14,7 +13,6 @@
     font-size: 24px;
     margin-bottom: 10px;
     font-weight: 300;
-    letter-spacing: 0.1em;
   }
   a:not(.faq__text-link) {
     color: #000;
@@ -163,3 +161,126 @@
   }
 }
 // Помощь стилиста END ====================================================
+
+@media (max-width: 1400px) {
+  .faq__col {
+    width: 48%;
+  }
+  .faqblock {
+    .faq__col {
+      order: 1;
+      &:nth-child(4),
+      &:nth-child(5) {
+        order: 3;
+      }
+      &:last-child() {
+        order: 2;
+      }
+    }
+  }
+}
+@media (max-width: $md) {
+  .faq__col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: $sm) {
+  .faq__col {
+    h3 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+}
+@media (max-width: $xs) {
+  .faq__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .faq__links a+a {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+
+// Информация об оплате =============================
+@media (max-width: 1400px) {
+  .information-pay {
+    .faq__row:first-child .col-6:first-child .faq__textwrap, 
+    .faq__row:first-child .col-6:nth-child(2) .faq__textwrap {
+      max-width: 520px;
+    }
+  }
+}
+// Информация об оплате END =========================
+@media (max-width: $lg) {
+  .information-pay .faq__row:first-child .col-6:first-child .faq__textwrap, .information-pay .faq__row:first-child .col-6:nth-child(2) .faq__textwrap {
+    max-width: 100%;
+  }
+  .information-pay {
+    .faq__row .col-6 {
+      width: 100%;
+    }
+    .faq__textwrap {
+      max-width: 100%;
+    }
+    .faq__col {
+      width: 100%;
+    }
+    .col-6 {
+      margin-bottom: 30px;
+    }
+  }
+}
+@media (max-width: $md){
+
+}
+@media (max-width: $sm) {
+  .faqblock h3 {
+    font-size: 18px;
+  }
+  .faq__textwrap {
+    font-size: 14px;
+  }
+}
+
+// Возврат и обмен =================================
+@media (max-width: 1400px) {
+  .faq__textwrap {
+    max-width: 520px;
+  }
+}
+@media (max-width: $md) {
+  .faqblock p {
+    margin-bottom: 20px;
+  }
+  .condition-return {
+    .col-6 {
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .faq__textwrap {
+      max-width: 100%;
+    }
+  }
+  .condition-return .faq__inner {
+    margin-bottom: -30px;
+  }
+}
+// Возврат и обмен END =============================
+
+// Помощь стилиста =================================
+@media (max-width: $md) {
+  .stylist-help .col-6 {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
+// Помощь стилиста END =============================

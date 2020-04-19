@@ -55,7 +55,7 @@
       border: none;
       font-weight: 300;
       font-size: 18px;
-      line-height: 160%;
+      line-height: 1.6;
       border-bottom: 1px solid #BDBDBD;
       padding: 10px 5px 10px 0px;
     }
@@ -136,3 +136,130 @@
   &__size {}
   }
   
+@media (max-width: $elg) {
+  .inputblock {
+    margin-right: 140px;
+    max-width: 520px;
+  }
+  .registrblock {
+    max-width: 520px;
+  }
+}
+@media (max-width: $lgh) {
+  .registrblock__info-btn {
+    margin-right: 15px;
+    max-width: 210px;
+  }
+  .registrblock__alert {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    & > span {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    label + label {
+      margin-left: 20px;
+    }
+  }
+}
+@media (max-width: $lg) {
+  .registration-block {
+    form {
+      display: none;
+    }
+  }
+  .inputblock,
+  .registrblock {
+    max-width: 50%;
+    // width: auto;
+    margin-right: 0;
+    margin-bottom: 0;
+    &.active {
+      form {
+        display: block;
+      }
+      .registrblock__title,
+      .inputblock__title {
+        &::after{ 
+          height: 3px;
+        }
+      }
+    }
+  }
+  .registrblock__title,
+  .inputblock__title {
+    // margin-bottom: 0;
+    position: relative;
+    transition: .4s;
+    padding-bottom: 4px;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+      transition: .3s;
+    }
+  }
+  .inputblock.active form {
+    width: 200%;
+  }
+  .registrblock form {
+    margin-left: -100%;
+    width: 200%;
+    // margin-left: calc(200% / -2);
+  }
+  .registration-block__inner {
+    justify-content: space-between;
+  }
+}
+@media (max-width: $xs) {
+  .registrblock__title,
+  .inputblock__title {
+    font-size: 18px;
+   }
+   .registration-block__inner {
+    .field-style__input input {
+      font-size: 14px;
+    }
+  }
+  .registrblock__alert>span {
+    font-size: 14px;
+  }
+  .registrblock__info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .registrblock__info-btn {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .registrblock__social {
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .registrblock__social > span {
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .inputblock__info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .inputblock__info-btn {
+    width: 100%;
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+  .inputblock__info-social {
+    span {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
