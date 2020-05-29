@@ -93,7 +93,7 @@
   }
   .menu__list-item.active {
     border: none;
-    a {
+    & > a {
       color: #fff !important;
     }
   }
@@ -170,12 +170,12 @@
       }
     }
     .menu__list {
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, 0%);
       opacity: 1;
     }
     .menu__list-item a {
       color: #c4c4c4;
-      padding-bottom: 10px;
+      // padding-bottom: 10px;
     }
   }
 }

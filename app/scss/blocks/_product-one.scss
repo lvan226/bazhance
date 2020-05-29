@@ -801,7 +801,11 @@
 
   // Для продукта END ==================
 }
+.productone-info__ackordeon {
+  display: none;
+}
 @media (max-width: $sm) {
+
   .product-one__imageandsliderwrap {
     max-width: 100%;
   }
@@ -841,6 +845,60 @@
 }
 
 @media (max-width: $xs) {
+  .productone-info__ackordeon {
+    display: block;
+    &-item {
+      padding: 15px 0;
+      border-top: 0.3px solid #000;
+      &:last-child {
+        border-bottom: 0.3px solid #000;
+      }
+    }
+    &-title { 
+      font-size: 18px;  
+      position: relative;
+      transition: .3s;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 1px;
+        background-color: #000;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 7px;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 15px;
+        background-color: #000;
+        transition: .5s;
+      }
+    }
+    &-content {
+      font-size: 16px;
+      max-height: 0;
+      overflow: hidden;
+      transition: .6s;
+    }
+    &-item.active-tab {
+      .productone-info__ackordeon-title {
+        margin-bottom: 10px;
+        &::before{ 
+          height: 0;
+        }
+      }
+      .productone-info__ackordeon-content {
+        max-height: 500px;
+      }
+    }
+  }
+
   .productone-info__row {
     flex-direction: column;
   }

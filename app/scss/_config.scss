@@ -31,9 +31,9 @@ $elg: 1849.98px;
 // </НАСТРОЙКИ СЕТКИ> =========================================================================================================
 
 @mixin ps {
-	margin-bottom: 150px;
+	margin-bottom: 100px;
 	@media (max-width: $lgh) {margin-bottom: 100px;}
-	// @media (max-width: $lg) {margin-bottom: 80px;}
+	// @media (max-width: $lg) {margin-bottom: 80px;}	
 	// @media (max-width: $md) {margin-bottom: 60px;}
 }
 
@@ -54,7 +54,53 @@ $gutter: $grid-gutter-width;
 
 // FONTS LOAD SECTION
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700&display=swap');
+// @import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700&display=swap');
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Thin.woff2') format('woff2'),
+			url('../fonts/Montserrat-Thin.woff') format('woff');
+	font-weight: 100;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Light.woff2') format('woff2'),
+			url('../fonts/Montserrat-Light.woff') format('woff');
+	font-weight: 300;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+			url('../fonts/Montserrat-Regular.woff');
+	font-weight: 400;
+	font-display: swap;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+			url('../fonts/Montserrat-Medium.woff') format('woff');
+	font-weight: 500;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+			url('../fonts/Montserrat-Bold.woff') format('woff');
+	font-weight: 700;
+	font-display: swap;
+	font-style: normal;
+}
+
 
 // @include font('Montserrat', normal, 100, '../fonts/Montserrat-Thin.woff2', '../fonts/Montserrat-Thin.woff');
 // @include font('Montserrat', normal, 300, '../fonts/Montserrat-Light.woff2', '../fonts/Montserrat-Light.woff');

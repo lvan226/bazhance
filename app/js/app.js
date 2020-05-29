@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
 	// Custom JS
 	// Анимация полосы в меню
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		for (var i = 0; i < elems.length; i++) {
 			elems[i].addEventListener('mouseover', function () {
 				// console.log(this.offsetLeft);
-				line.style.height = 4 + 'px';
+				line.style.height = 3 + 'px';
 				line.style.marginLeft = this.offsetLeft + 'px';
 				// console.log(this.offsetWidth);
 				line.style.width = this.offsetWidth + 'px';
@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 		}
 	}
+
 
 	// Слайдер на главной странице
 	$('.main-catalog-slick').slick({
@@ -59,29 +60,29 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	// Меню в шапке
-	$('.menu-burger').on('click', function() {
+	$('.menu-burger').on('click', function () {
 		$('.menu').toggleClass('active');
 		$('.filter-bg').toggleClass('active');
 		$('.logo').toggleClass('active');
 	});
 
 	// Поиск анимация выдвижения
-	$(".menu__search").hover(function() {
+	$(".menu__search").hover(function () {
 		$(".menu__search").addClass('active');
 	},
-	function() {
-		if (!$(".input-search").val() && !$('.input-search').is(":focus")) {
-			$(".menu__search").removeClass('active');
-		}
-	});
-	$(".menu__search").on('click', function() {
+		function () {
+			if (!$(".input-search").val() && !$('.input-search').is(":focus")) {
+				$(".menu__search").removeClass('active');
+			}
+		});
+	$(".menu__search").on('click', function () {
 		$(".menu__search").addClass('active');
 	});
-	$(".input-search").on("input", function() {
+	$(".input-search").on("input", function () {
 		$(".menu__search").addClass('active');
 	});
 	$('.input-search').focusout(function () {
-		if ($(this).val() === '' ) {
+		if ($(this).val() === '') {
 			$(".menu__search").removeClass('active');
 		}
 	});
@@ -92,10 +93,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	// Выпадающее меню в фильтрах
-	$('.catalog-filter__dropdown-title').on('click', function() {
-		// var list = $(this + '+catalog-filter__dropdown-list');
-		$(this).next().toggleClass('active');
-		$(this).toggleClass('active');
+	$('.catalog-filter__dropdown-title').on('click', function () {
+		if (window.innerWidth <= 767) {
+			// var list = $(this + '+catalog-filter__dropdown-list');
+			$(this).next().toggleClass('active');
+			$(this).toggleClass('active');
+		}
 	});
 
 	// Стилизайи range-слайдера
@@ -117,45 +120,53 @@ document.addEventListener("DOMContentLoaded", function() {
 	var $ionSlider = $(".js-range-slider").data("ionRangeSlider");
 
 	// Значение из input в слайдер
-	$('#js-range-slider__from').on('change', function(){
+	$('#js-range-slider__from').on('change', function () {
 		$ionSlider
-      .update({
-        // from_min: this.value,
-        from: this.value
-      });
+			.update({
+				// from_min: this.value,
+				from: this.value
+			});
 	});
-	$('#js-range-slider__to').on('change', function(){
+	$('#js-range-slider__to').on('change', function () {
 		$ionSlider
-      .update({
-        // from_min: this.value,
-        to: this.value
-      });
+			.update({
+				// from_min: this.value,
+				to: this.value
+			});
 	});
 
 
 	// Кнопка фильтры в каталоге на мобильных устройствах
-	$('#catalog__filter-btnmobile').on('click', function() {
+	$('#catalog__filter-btnmobile').on('click', function () {
 		$('#catalog-filter').addClass('active');
 	});
-	$('.filter-mobile__btn').on('click', function() {
+	$('.filter-mobile__btn').on('click', function () {
 		$('#catalog-filter').removeClass('active');
 	});
 
 
 	// ТАБЫ для одного товара
-	$('.productone-info__tab-title > div').on('click', function() {
+	$('.productone-info__tab-title > div').on('click', function () {
 		$('.productone-info__tab-title > div').removeClass('active-tab');
 		$(this).addClass('active-tab');
 		var id = $(this).attr('data-tab');
 		$('.productone-info__tab-content > div').removeClass('active-tab');
 		$('.productone-info__tab-content > div[data-tab="' + id + '"]').addClass('active-tab');
+		// $('.productone-info__ackordeon > div').removeClass('active-tab');
+		// $('.productone-info__ackordeon > div[data-tab="' + id + '"]').addClass('active-tab');
+	});
+	// Аккордеон в товаре
+	$('.productone-info__ackordeon > div').on('click', function () {
+		$('.productone-info__ackordeon > div').removeClass('active-tab');
+		$(this).addClass('active-tab');
+		// var id = $(this).attr('data-tab');
 	});
 
 	// Слайдер для карточки товара на странице товара
 	$('.product-one__slider').slick({
 		vertical: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
+		slidesToShow: 5,
+		slidesToScroll: 1,
 		verticalSwiping: true,
 		infinite: true,
 		prevArrow: '<button class="slick-prev slick-arrow" type="button" style=""><img src="images/dest/product-one/arrow-slider-top.png" alt=""></button>',
@@ -221,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	// Табы на странице оформление заказа
-	$('.checkout-page__second .checkout-tab__title').on('click', function() {
+	$('.checkout-page__second .checkout-tab__title').on('click', function () {
 		$('.checkout-page__second .checkout-tab__title').removeClass('tab-active');
 		$(this).addClass('tab-active');
 		var id = $(this).attr('data-tab');
@@ -229,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		$('.checkout-page__second .checkout-tab__content[data-tab="' + id + '"]').addClass('tab-active');
 	});
 
-	$('.checkout-page__first .checkout-tab__title').on('click', function() {
+	$('.checkout-page__first .checkout-tab__title').on('click', function () {
 		$('.checkout-page__first .checkout-tab__title').removeClass('tab-active');
 		$(this).addClass('tab-active');
 		var id = $(this).attr('data-tab');
@@ -239,15 +250,73 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 	// Табы в блоке регистрация
-	$('.inputblock__title').on("click", function() {
+	$('.inputblock__title').on("click", function () {
 		$('.inputblock').addClass('active');
 		$('.registrblock').removeClass('active');
 	});
 
-	$('.registrblock__title').on("click", function() {
+	$('.registrblock__title').on("click", function () {
 		$('.registrblock').addClass('active');
 		$('.inputblock').removeClass('active');
 	});
+
+
+	// Выпадающее меню в каталгое на мобильных экранах
+	$('.menu__list-drop').on('click', function (e) {
+		e.preventDefault();
+		$(this).toggleClass('active-drop');
+	});
+
+	// Маска для даты
+	function setEventListener(ev, el, f) {
+		if (el) {
+			el.addEventListener(ev, f)
+		}
+	}
+
+	var input = document.querySelectorAll('#mydate')[0];
+
+	var dateInputMask = function dateInputMask(elm) {
+		setEventListener('keypress', elm, function (e) {
+			if (e.keyCode < 47 || e.keyCode > 57) {
+				e.preventDefault();
+			}
+
+			var len = elm.value.length;
+
+			// If we're at a particular place, let the user type the slash
+			// i.e., 12/12/1212
+			if (len !== 1 || len !== 3) {
+				if (e.keyCode == 47) {
+					e.preventDefault();
+				}
+			}
+
+			// If they don't add the slash, do it for them...
+			if (len === 2) {
+				elm.value += '.';
+			}
+
+			// If they don't add the slash, do it for them...
+			if (len === 5) {
+				elm.value += '.';
+			}
+		});
+	};
+
+	dateInputMask(input);
+	
+	// Маска и выбор кода страны для телефона
+	var input = document.querySelector("#phone");
+	if (input) {
+		window.intlTelInput(input, {
+			onlyCountries: ["ru", "ua"],
+			autoPlaceholder: "aggressive",
+			separateDialCode: "true",
+			utilsScript: 'js/utils.js',
+		});
+	}
+
 });
 
 // function inputField(input, line) {

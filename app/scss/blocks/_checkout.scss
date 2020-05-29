@@ -262,3 +262,44 @@
    // .field-style__input
    &__input {}
    }
+
+
+@media (max-width: $md) {
+   .checkout-page__row {
+      flex-direction: column;
+   }
+   .checkout-page__tab-title {
+      width: 100%;
+      margin-bottom: 20px;
+   }
+   .checkout-page__second .checkout-tab__content.tab-active {
+      padding-top: 10px;
+   }
+   .checkout-page__first {
+      margin-bottom: 50px;
+   }
+}
+@media (max-width: $xs) {
+   .checkout-page__tab-title {
+      padding: 20px 60px 20px 20px;
+      p {
+         margin-bottom: 0;
+         font-size: 12px;
+      }
+   }
+   .checkout-page__tab-title h4 {
+      margin-bottom: 5px;
+      font-size: 16px;
+   }
+   .checkout-page__title {
+      font-size: 18px;
+   }
+   .checkout-page {
+      .field-style__input label {
+         font-size: 16px;
+      }
+   }
+   .checkout-page__form .field-style__input {
+      width: 100%;
+   }
+}

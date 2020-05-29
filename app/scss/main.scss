@@ -10,8 +10,8 @@
 @import 'blocks/faq';
 @import 'blocks/product-one';
 @import 'blocks/checkout';
+@import 'intlTelInput.min.scss';
 // CUSTOM USER STYLES & IMPORTS
-
 
 .breadcrumbs {
   padding: 50px 0 80px;
@@ -138,7 +138,8 @@
     @media (min-width: 992px) {display: flex;}
     @media (max-width: $md) {
       position: fixed;
-      top: 50%;
+      width: 100%;
+      top: 80px;
       left: 50%;
       transform: translate(-50%, -250%);
       text-align: center;
@@ -148,12 +149,19 @@
   // .menu__list-item
   &__list-item {
     font-weight: 300;
-    border-bottom: 4px solid transparent;
+    border-bottom: 3px solid transparent;
     transition: .4s;
+    & + & {
+      margin-left: 40px;
+      @media (max-width: $md) {
+        margin-left: 0;
+      }
+    }
     @media (max-width: $md) {
       display: block;
       font-size: 24px;
       text-transform: uppercase;
+      line-height: 1.2;
     }
     &.active {
       border-color: #000;
@@ -169,11 +177,19 @@
     }
     a {
       display: inline-block;
-      padding: 30px 50px;
+      padding: 30px 0;
       color: #555;
-      @media (max-width: $elg) {padding: 30px 30px;}
-      @media (max-width: $lgh) {padding: 30px 20px;}
-      @media (max-width: $lg) {padding: 30px 15px;}
+      font-size: 16px;
+      @media (max-width: $elg) {padding: 30px 0;}
+      @media (max-width: $lgh) {padding: 30px 0;}
+      @media (max-width: $lg) {padding: 30px 0;}
+      @media (max-width: $md) {padding: 11.5px 0;}
+    }
+    & > a {
+      @media (max-width: $md) {
+        letter-spacing: 0.1em;
+        line-height: 1;
+      }
     }
     font-weight: 300;
   }
@@ -183,8 +199,8 @@
     justify-content: space-between;
     align-items: center;
     &>a {
-      margin-left: 60px;
-      @media (max-width: $lgh) {margin-left: 45px;}
+      margin-left: 40px;
+      @media (max-width: $lgh) {margin-left: 35px;}
       @media (max-width: $lg) {margin-left: 30px;}
     }
   }
@@ -422,11 +438,11 @@
   &__item-title {
     text-align: center;
     padding-top: 30px;
-    font-size: 18px;
+    font-size: 13px;
     font-weight: 300;
     text-transform: uppercase;
-    @media (max-width: $elg) {padding-top: 20px;}
-    @media (max-width: $sm) {font-size: 16px;}
+    @media (max-width: $elg) {padding-top: 10px;}
+    // @media (max-width: $sm) {font-size: 13px;}
   }
   .slick-track {
     display: flex;
@@ -558,15 +574,15 @@
   // .main-about__content
   &__content {
     width: 50%;
-    max-width: 571px;
+    max-width: 372px;
     display: flex;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    font-size: 24px;
+    font-size: 14px;
     line-height: 1.6;
-    @media (max-width: $elg) {font-size: 20px;margin-left: 100px;}
-    @media (max-width: $lg) {font-size: 18px;}
+    @media (max-width: $elg) {font-size: 14px;margin-left: 100px;}
+    @media (max-width: $lg) {font-size: 14px;}
     @media (max-width: $md) {margin: 0;width: 100%;padding: 20px 0;min-height: 100vw;align-items: center;max-width: 100%;}
   }
   }
@@ -637,12 +653,33 @@
 
 
 // Style for Footer ===============================================================================
+.link-developer {
+  font-size: 12px;
+  margin-top: 50px;
+  a {
+    border-bottom: 1px solid #000;
+  }
+  @media (max-width: 1300px) {
+    font-size: 10px;
+  }
+  @media (max-width: $lg) {
+    font-size: 12px;
+  }
+  @media (max-width: $sm) {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
 .footer {
   font-weight: 300;
   font-size: 14px;
   border-top: 1px solid #C4C4C4;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 120px;
+  position: relative;
   // .footer__inner
   &__inner {
     display: flex;
@@ -840,4 +877,15 @@
     }
   }
 // Style for Footer END ===============================================================================
+.iti__flag {background-image: url("../images/dest/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("../images/dest/flags@2x.png");}
+}
+.iti__country {
+  display: block;
+}
+.iti--allow-dropdown {
+  width: 100%;
+}
 @import 'media';

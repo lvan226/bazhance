@@ -25,5 +25,8 @@
 		"gulp-uglify-es": "^2.0.0",
 		"jquery-form-styler": "^2.0.2",
 		"slick-carousel": "^1.8.1"
+	},
+	"dependencies": {
+		"node-sass": "^4.14.1"
 	}
 }

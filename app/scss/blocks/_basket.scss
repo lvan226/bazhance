@@ -244,7 +244,21 @@
   }
   .btn {
   }
-  
+  .orderblock__price .orderblock__info-count {
+    font-weight: 400;
+  }
+  .orderblock__info-count {
+    .jq-selectbox.opened {
+      .jq-selectbox__select::before {
+        transform: rotate(180deg) translateY(50%);
+      }
+    }
+  }
+  .jq-selectbox__select::before {
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: .3s;
+  }
 // Style for MENU =========================================================================
 
 @media (max-width: $elg) {
