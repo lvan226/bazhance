@@ -4,17 +4,21 @@
   }
 }
 .menu__search {
-  max-width: 23px;
+  transform: translateY(3px);
+  max-width: 17px;
   overflow: hidden;
-  transition: .4s;
+  transition: 0.4s;
   padding-bottom: 3px;
+  // padding-top: 3px;
+  max-height: 22px;
   &-btn {
-    bottom: 3px;
+    bottom: 5px;
     left: auto;
     right: 0px;
-    transition: .3s;
+    transition: 0.3s;
     cursor: pointer;
-    z-index: 4;
+    z-index: -1;
+    // transform: translateY(-2px);
     svg {
       display: block;
     }
@@ -23,19 +27,22 @@
     border-bottom: 0;
     background-color: transparent;
     padding: 0;
-    transition: .3s;
-
+    transition: 0.3s;
     // padding-bottom: 3px;
     &::placeholder {
-      transition: .25s ease-out;
+      transition: 0.25s ease-out;
       opacity: 0;
     }
   }
 }
 .menu__search.active {
   max-width: 200px;
-  @media (max-width: $lg) {max-width: 180px;}
-  @media (max-width: $md) {max-width: 200px;}
+  @media (max-width: $lg) {
+    max-width: 180px;
+  }
+  @media (max-width: $md) {
+    max-width: 200px;
+  }
   // button {
   //   max-width: 100%;
   // }
@@ -67,27 +74,29 @@
   z-index: 290;
   width: 0;
   background-color: #000;
-  transition: opacity .9s;
+  transition: opacity 0.9s;
   opacity: 0;
-  @media (min-width: 992px) {display: none;}
+  @media (min-width: 992px) {
+    display: none;
+  }
   &.active {
-    opacity: .8;
+    opacity: 0.8;
     width: 100%;
   }
 }
 @media (max-width: $md) {
   .menu-burger {
-    transition: .3s;
+    transition: 0.3s;
   }
   .logo {
     z-index: 300;
     position: relative;
     svg > g {
-      transition: .3s;
+      transition: 0.3s;
     }
     &.active {
       svg > g {
-        fill: #F9F6F2;
+        fill: #f9f6f2;
       }
     }
   }
@@ -103,9 +112,9 @@
   }
   .menu.active {
     border-color: #fff;
-    border-top: 1px solid #F9F6F2;
+    border-top: 1px solid #f9f6f2;
     background-color: transparent;
-    transition: .3s;
+    transition: 0.3s;
     .menu-burger {
       height: 20px;
       // overflow: hidden;
@@ -129,44 +138,48 @@
         background-color: #fff;
       }
       svg path {
-        stroke: #F9F6F2;;
+        // stroke: #F9F6F2;
+        fill: #f9f6f2;
       }
       input {
-        color: #F9F6F2;
+        color: #f9f6f2;
         &::placeholder {
-          color: #F9F6F2;
+          color: #f9f6f2;
         }
       }
     }
-    .menu__search-send {
-      svg {
-        fill: #F9F6F2;
-      }
-    }
+    // .menu__search-send {
+    //   svg {
+    //     fill: #F9F6F2;
+    //   }
+    // }
     .menu__like {
       background-image: url(../images/dest/icon/heart-media.svg);
-      &.menu__link-empty {
+      &.menu__link--empty {
         background-image: url(../images/dest/icon/heart-empty-media.svg);
       }
     }
     .menu__basket {
       background-image: url(../images/dest/icon/bag-media.svg);
-      &.menu__link-empty {
+      &.menu__link--empty {
         background-image: url(../images/dest/icon/bag-empty-media.svg);
       }
     }
     .menu__user {
       background-image: url(../images/dest/icon/user-active-menu.svg);
+      &.menu__user--full {
+        background-image: url(../images/dest/icon/user-active-full.svg);
+      }
     }
     .language {
-      color: #F9F6F2;
+      color: #f9f6f2;
     }
     .menu__link-count {
-      color: #F9F6F2;
+      color: #f9f6f2;
     }
     .menu-burger {
       span {
-        background-color: #F9F6F2;
+        background-color: #f9f6f2;
       }
     }
     .menu__list {

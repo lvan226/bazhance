@@ -1,12 +1,9 @@
 // IMPORT SECTION
 
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
+@import "node_modules/bootstrap/scss/bootstrap-reboot.scss"; // Bootstrap Reboot collection
 // @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'; // Optional Bootstrap Utilites
-
-
-
 
 $d3: #3d3d3d;
 
@@ -20,21 +17,59 @@ $lg: 1199.98px;
 $lgh: 1280px;
 $elg: 1849.98px;
 
-.container{max-width:$mw;margin: 0 auto; padding: 0 15px; width: 100%;
-	@media (max-width:$elg){max-width: 1350px;padding: 0 30px;}
-	@media (max-width:$lg){max-width: 970px;}
-	@media (max-width:$md){max-width: 750px;}
-  @media (max-width:$sm){max-width: 600px;padding:0 10px;}
-	@media (max-width:$xs){max-width: 100%;;padding:0 30px;}
-	@media (max-width: 360px) {max-width: 320px;padding:0 10px;}
+.container {
+	max-width: $mw;
+	margin: 0 auto;
+	padding: 0 15px;
+	width: 100%;
+	@media (max-width: $elg) {
+		max-width: 1350px;
+		padding: 0 30px;
+	}
+	@media (max-width: $lg) {
+		max-width: 970px;
+	}
+	@media (max-width: $md) {
+		max-width: 750px;
+	}
+	@media (max-width: $sm) {
+		max-width: 600px;
+		padding: 0 10px;
+	}
+	@media (max-width: $xs) {
+		max-width: 100%;
+		padding: 0 30px;
+	}
+	@media (max-width: 360px) {
+		max-width: 320px;
+		padding: 0 10px;
+	}
 }
 // </НАСТРОЙКИ СЕТКИ> =========================================================================================================
 
 @mixin ps {
 	margin-bottom: 100px;
-	@media (max-width: $lgh) {margin-bottom: 100px;}
-	// @media (max-width: $lg) {margin-bottom: 80px;}	
-	// @media (max-width: $md) {margin-bottom: 60px;}
+	@media (max-width: $lgh) {
+		margin-bottom: 100px;
+	}
+	@media (max-width: $lg) {
+		margin-bottom: 80px;
+	}
+	@media (max-width: $md) {
+		margin-bottom: 60px;
+	}
+}
+@mixin mts {
+	margin-top: 100px;
+}
+.catalog,
+.contact-map,
+.faq,
+.profile,
+.like,
+.basket,
+.conf {
+	@include mts;
 }
 
 // USER VARIABLES SECTION
@@ -50,64 +85,54 @@ $montserrat: Montserrat, sans-serif; // Roboto Font Family
 $grid-gutter-width: 20px;
 $gutter: $grid-gutter-width;
 
-
-
 // FONTS LOAD SECTION
 
 // @import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700&display=swap');
 @font-face {
-	font-family: 'Montserrat';
-	src: url('../fonts/Montserrat-Thin.woff2') format('woff2'),
-			url('../fonts/Montserrat-Thin.woff') format('woff');
+	font-family: "Montserrat";
+	src: url("../fonts/Montserrat-Thin.woff2") format("woff2"), url("../fonts/Montserrat-Thin.woff") format("woff");
 	font-weight: 100;
 	font-display: swap;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Montserrat';
-	src: url('../fonts/Montserrat-Light.woff2') format('woff2'),
-			url('../fonts/Montserrat-Light.woff') format('woff');
+	font-family: "Montserrat";
+	src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
 	font-weight: 300;
 	font-display: swap;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Montserrat';
-	src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
-			url('../fonts/Montserrat-Regular.woff');
+	font-family: "Montserrat";
+	src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff");
 	font-weight: 400;
 	font-display: swap;
 	font-style: normal;
 }
 
-
 @font-face {
-	font-family: 'Montserrat';
-	src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),
-			url('../fonts/Montserrat-Medium.woff') format('woff');
+	font-family: "Montserrat";
+	src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
 	font-weight: 500;
 	font-display: swap;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Montserrat';
-	src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
-			url('../fonts/Montserrat-Bold.woff') format('woff');
+	font-family: "Montserrat";
+	src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
 	font-weight: 700;
 	font-display: swap;
 	font-style: normal;
 }
-
 
 // @include font('Montserrat', normal, 100, '../fonts/Montserrat-Thin.woff2', '../fonts/Montserrat-Thin.woff');
 // @include font('Montserrat', normal, 300, '../fonts/Montserrat-Light.woff2', '../fonts/Montserrat-Light.woff');
 // @include font('Montserrat', normal, 400, '../fonts/Montserrat-Regular.woff2', '../fonts/Montserrat-Regular.woff');
 // @include font('Montserrat', normal, 500, '../fonts/Montserrat-Medium.woff2', '../fonts/Montserrat-Medium.woff');
 // @include font('Montserrat', normal, 700, '../fonts/Montserrat-Bold.woff2', '../fonts/Montserrat-Bold.woff');
-
 
 // GENERAL DOCUMENT STYLES
 
@@ -120,16 +145,21 @@ $gutter: $grid-gutter-width;
 	color: #fff;
 }
 
-input, textarea {
+input,
+textarea {
 	outline: none;
-	&:focus:required:invalid { border-color: red }
-	&:required:valid { border-color: green }
+	&:focus:required:invalid {
+		border-color: red;
+	}
+	&:required:valid {
+		border-color: green;
+	}
 }
 html,
-body{
-  height: 100%;
-  position: relative;
-  // overflow-x: hidden;
+body {
+	height: 100%;
+	position: relative;
+	// overflow-x: hidden;
 }
 body {
 	font-family: $montserrat;
@@ -193,13 +223,12 @@ a {
 		width: 100%;
 		height: 1px;
 		background-color: #3d3d3d;
-		transition: .4s;
+		transition: 0.4s;
 	}
 }
 
 .jq-selectbox {
 	&.active {
-		
 	}
 }
 .jq-selectbox__select {
@@ -219,7 +248,7 @@ a {
 	}
 }
 .jq-selectbox__dropdown {
-	background: #FFFFFF;
+	background: #ffffff;
 	box-shadow: -2px 2px 6px rgba(0, 0, 0, 0.25);
 	border-radius: 2px;
 	padding: 15px;
@@ -229,11 +258,11 @@ a {
 		flex-direction: column;
 	}
 	li {
-		transition: .3s;
+		transition: 0.3s;
 		cursor: pointer;
 		font-size: 12px;
 		font-weight: 300;
-		&+li {
+		& + li {
 			margin-top: 5px;
 		}
 		&:hover {
@@ -250,9 +279,9 @@ label {
 		&__div {
 			width: 10px;
 			height: 10px;
-			border: 1px solid #C4C4C4;
+			border: 1px solid #c4c4c4;
 			position: relative;
-			transition: .23s;
+			transition: 0.23s;
 			&::after {
 				content: "";
 				position: absolute;
@@ -265,7 +294,7 @@ label {
 				background-position: center;
 				background-repeat: no-repeat;
 				opacity: 0;
-				transition: .5s;
+				transition: 0.5s;
 			}
 		}
 		&.checked {
@@ -284,45 +313,42 @@ label {
 	overflow: hidden;
 }
 .slick-track {
-	
 }
 
 .black-hover {
-	
 }
 .color-black,
 .color-neznayu1,
 .color-neznayu2,
 .color-neznayu3,
 .color-red {
-	width: 22px;
-	height: 22px;
-	@media (max-width: $sm) {
-		width: 15px;
-		height: 15px;
-	}
-	@media (max-width: $xs) {
-		width: 10px;
-		height: 10px;
-	}
+	width: 10px;
+	height: 10px;
+	// @media (max-width: $sm) {
+	// 	width: 10px;
+	// 	height: 10px;
+	// }
+	// @media (max-width: $xs) {
+	// 	width: 10px;
+	// 	height: 10px;
+	// }
 }
 .color-black {
 	background-color: #000;
 }
 .color-neznayu1 {
-	background-color: #C19A6B;
+	background-color: #c19a6b;
 }
 .color-neznayu2 {
-	background-color: #FFF8E7;
+	background-color: #fff8e7;
 }
 .color-neznayu3 {
-	background-color: #FFF6D4;
+	background-color: #fff6d4;
 }
 .color-red {
-	background-color: #F70D0D;
+	background-color: #f70d0d;
 }
 // Style for MAIN SLICK =========================================================================
-
 
 .input-checkbox {
 	display: flex;
@@ -334,7 +360,7 @@ label {
 			width: 20px;
 			height: 20px;
 			border: 0.5px solid #000000;
-			transition: .3s;
+			transition: 0.3s;
 			&::before {
 				content: "";
 				position: absolute;
@@ -348,7 +374,7 @@ label {
 				background-repeat: no-repeat;
 				background-position: center;
 				opacity: 0;
-				transition: .35s;
+				transition: 0.35s;
 			}
 		}
 		&.checked {
@@ -357,7 +383,6 @@ label {
 					opacity: 1;
 				}
 			}
-
 		}
 	}
 	.jq-checkbox {
@@ -367,7 +392,7 @@ label {
 			width: 20px;
 			height: 20px;
 			border: 0.5px solid #000000;
-			transition: .3s;
+			transition: 0.3s;
 			&::before {
 				content: "";
 				position: absolute;
@@ -381,7 +406,7 @@ label {
 				background-repeat: no-repeat;
 				background-position: center;
 				opacity: 0;
-				transition: .35s;
+				transition: 0.35s;
 			}
 		}
 		&.checked {
@@ -390,7 +415,6 @@ label {
 					opacity: 1;
 				}
 			}
-
 		}
 	}
 }
