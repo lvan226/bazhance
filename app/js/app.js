@@ -92,6 +92,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	});
 
+	// setTimeout(function() {
+	// 	$('select').trigger('refresh');
+	// }, 1)
+
 	// Выпадающее меню в фильтрах
 	$('.catalog-filter__dropdown-title').on('click', function () {
 		if (window.innerWidth <= 767) {
@@ -232,20 +236,20 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	// Табы на странице оформление заказа
-	$('.checkout-page__second .checkout-tab__title').on('click', function () {
-		$('.checkout-page__second .checkout-tab__title').removeClass('tab-active');
-		$(this).addClass('tab-active');
+	$('.checkout-page__block--bottom .checkout-page__tab-title').on('click', function () {
+		$('.checkout-page__block--bottom .checkout-page__tab-title').removeClass('checkout-page__tab-title--active');
+		$(this).addClass('checkout-page__tab-title--active');
 		var id = $(this).attr('data-tab');
-		$('.checkout-page__second .checkout-tab__content').removeClass('tab-active');
-		$('.checkout-page__second .checkout-tab__content[data-tab="' + id + '"]').addClass('tab-active');
+		$('.checkout-page__block--bottom .checkout-page__tab-content').removeClass('checkout-page__tab-content--active');
+		$('.checkout-page__block--bottom .checkout-page__tab-content[data-tab="' + id + '"]').addClass('checkout-page__tab-content--active');
 	});
 
-	$('.checkout-page__first .checkout-tab__title').on('click', function () {
-		$('.checkout-page__first .checkout-tab__title').removeClass('tab-active');
-		$(this).addClass('tab-active');
+	$('.checkout-page__block--top .checkout-page__tab-title').on('click', function () {
+		$('.checkout-page__block--top .checkout-page__tab-title').removeClass('checkout-page__tab-title--active');
+		$(this).addClass('checkout-page__tab-title--active');
 		var id = $(this).attr('data-tab');
-		$('.checkout-page__first .checkout-tab__content').removeClass('tab-active');
-		$('.checkout-page__first .checkout-tab__content[data-tab="' + id + '"]').addClass('tab-active');
+		$('.checkout-page__block--top .checkout-page__tab-content').removeClass('checkout-page__tab-content--active');
+		$('.checkout-page__block--top .checkout-page__tab-content[data-tab="' + id + '"]').addClass('checkout-page__tab-content--active');
 	});
 
 
