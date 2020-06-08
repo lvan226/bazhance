@@ -7,12 +7,20 @@
   font-weight: 300;
   color: #000;
   p {
+    max-width: 300px;
     margin-bottom: 30px;
+    
+    font-size: 14px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
   h3 {
-    font-size: 24px;
     margin-bottom: 10px;
+
+    font-size: 12px;
     font-weight: 300;
+    text-transform: uppercase;
   }
   a:not(.faq__text-link) {
     color: #000;
@@ -44,7 +52,7 @@
 }
 // .faq__links
 &__links {
-  font-size: 16px;
+  font-size: 14px;
   color: #000;
   a + a {
     margin-left: 50px;
@@ -188,7 +196,7 @@
 @media (max-width: $sm) {
   .faq__col {
     h3 {
-      font-size: 18px;
+      // font-size: 18px;
     }
     p {
       font-size: 14px;
@@ -242,7 +250,7 @@
 }
 @media (max-width: $sm) {
   .faqblock h3 {
-    font-size: 18px;
+    // font-size: 18px;
   }
   .faq__textwrap {
     font-size: 14px;

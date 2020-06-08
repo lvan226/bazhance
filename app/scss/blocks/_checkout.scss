@@ -256,6 +256,16 @@
             transform: rotate(180deg) translateY(50%);
          }
       }
+      &.jq-selectbox.jqselect {
+         color: #bdbdbd;
+      }
+      &.jq-selectbox.jqselect.changed {
+         color: #000000;
+      }
+
+      .jq-selectbox__dropdown li.disabled  {
+         display: none;
+      }
    }
 
    // .checkout-page__field-input
