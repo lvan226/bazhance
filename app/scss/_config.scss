@@ -237,18 +237,18 @@ a {
 }
 .jq-selectbox__select {
 	cursor: pointer;
-	padding-right: 30px;
+	padding-right: 15px;
 	position: relative;
 	&::before {
 		content: "";
 		position: absolute;
 		right: 0;
-		top: 50%;
+		top: 45%;
 		transform: translateY(-50%);
 		background-image: url(../images/dest/icon/arrow-down-select.svg);
 		background-size: cover;
-		width: 20px;
-		height: 10px;
+		width: 10px;
+		height: 6px;
 	}
 }
 .jq-selectbox__dropdown {

@@ -10,20 +10,38 @@
       justify-content: space-between;
       max-width: 770px;
       margin: 0 auto;
+      @media (max-width: $sm) {
+         flex-direction: column;
+         max-width: 410px;
+         margin: 0 auto;
+      }
    }
 
    // .checkout-page__main
 
    &__main {
       max-width: 410px;
+      @media (max-width: $sm) {
+         max-width: 100%;
+         width: 100%;
+         margin-bottom: 60px;
+      }
+      @media (max-width: $xs) {
+         margin-bottom: 30px;
+      }
    }
 
    // .checkout-page__block
 
    &__block {
+       // .checkout-page__block--top
       &--top {
          margin-bottom: 100px;
+         @media (max-width: $sm) {
+            margin-bottom: 50px;
+         } 
       }
+      // .checkout-page__block--bottom
       &--bottom {
       }
    }
@@ -40,6 +58,9 @@
 
    &__row {
       display: flex;
+      @media (max-width: $xs) {
+         flex-direction: column;
+      }
    }
 
    // .checkout-page__tab-circle
@@ -84,6 +105,10 @@
       cursor: pointer;
       & + & {
          margin-left: 50px;
+         @media (max-width: $xs) {
+            margin-top: 20px;
+            margin-left: 0;
+         }
       }
       &--active {
          color: #000;
@@ -125,6 +150,9 @@
       }
       &--bottom {
          padding-top: 100px;
+         @media (max-width: $xs) {
+            padding-top: 50px;
+         }
       }
    }
 
@@ -140,6 +168,9 @@
    &__map-col {
       & + & {
          margin-left: 60px;
+         @media (max-width: $xs) {
+            margin-left: 20px;
+         }
       }
    }
 
@@ -203,6 +234,10 @@
 
       border-radius: 50%;
       overflow: hidden;
+      @media (max-width: $xs) {
+         width: 80px;
+         height: 80px;
+      }
       iframe {
          width: 100%;
          height: 100%;
@@ -218,12 +253,16 @@
 
       display: flex;
       padding-left: 110px;
+      @media (max-width: $xs) {
+         padding-top: 30px;
+         padding-left: 0;
+      }
       & + & {
          margin-top: 30px;
       }
    }
 
-   // .checkout-page__field-input
+   // .checkout-page__field-select
 
    &__field-select {
       width: 100%;
@@ -280,6 +319,9 @@
 
       font-size: 14px;
       line-height: 1;
+      @media (max-width: $xs) {
+         max-width: 100%;
+      }
 
       &::placeholder {
          color: #bdbdbd;
@@ -314,6 +356,9 @@
 
       max-width: 220px;
       width: 100%;
+      @media (max-width: $xs) {
+         position: static;
+      }
    }
 
    // .checkout-page__link
@@ -344,6 +389,9 @@
       margin-top: 40px;
 
       font-size: 14px;
+      @media (max-width: $xs) {
+         margin-top: 20px;
+      }
    }
 
    // .checkout-page__total-num

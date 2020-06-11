@@ -115,96 +115,101 @@
               <!-- Редактирование профиля -->
               <div class="profile-edit">
                 <div class="profile-edit__inner">
-                  <div class="profile-edit__address">
-                    <div class="profile-edit__title">Адрес доставки</div>
-                    <div class="formblock-form">
-                      <div class="formblock-form__line">
-                        <div class="field-style__input">
-                          <input type="text" placeholder="Город">
-                        </div>
-                      </div>
-                      <div class="formblock-form__line">
-                        <div class="field-style__input">
-                          <input type="text" placeholder="Улица">
-                        </div>
-                      </div>
-                      <div class="formblock-form__line formblock-form__line-flex">
-                        <div class="field-style__input">
-                          <input type="number" placeholder="Дом">
-                        </div>
-                        <div class="field-style__input">
-                          <input type="number" placeholder="Квартира / офис">
-                        </div>
-                      </div>
-                      <div class="formblock-form__line formblock-form__line-flex">
-                        <div class="field-style__input">
-                          <input type="number" placeholder="Этаж">
-                        </div>
-                        <div class="field-style__input">
-                          <input type="number" placeholder="Подъезд">
-                        </div>
-                      </div>
-                      <div class="formblock-form__line formblock-form__line-check">
-                        <label class="input-checkbox">
-                          <input name="registration-alert" type="checkbox">
-                          <span>Основной</span>
-                        </label>
-                      </div>
-                      <button class="formblock-form__link">Добавить ещё один адрес</button>
-                    </div>
-                  </div>
-                  <!-- /.profile-edit__address -->
                   <div class="profile-edit__personal">
                     <div class="profile-edit__title">Личные данные</div>
                     <div class="formblock-form">
                       <div class="formblock-form__line">
-                        <div class="field-style__input">
-                          <input type="email" placeholder="E-mail">
-                        </div>
+                        <label class="field-style__input profile-edit__label-wrap">
+                          <div class="profile-edit__label-text">E-mail</div>
+                          <input type="email" placeholder="pochta@mail.ru">
+                        </label>
                       </div>
-                      <a href="change-password.html" class="formblock-form__link">Сменить пароль</a>
+                      <div class="formblock-form__link change-password-active-button">Сменить пароль</div>
                       <div class="formblock-form__line">
-                        <div class="field-style__input">
-                          <input type="text" placeholder="Имя">
-                        </div>
-                      </div>
-                      <div class="formblock-form__line">
-                        <div class="field-style__input">
-                          <input type="text" placeholder="Фамилия">
+                        <div class="field-style__input profile-edit__label-wrap">
+                          <div class="profile-edit__label-text">Имя</div>
+                          <input type="text" placeholder="Анна">
                         </div>
                       </div>
                       <div class="formblock-form__line">
-                        <div class="field-style__input">
+                        <div class="field-style__input profile-edit__label-wrap">
+                          <div class="profile-edit__label-text">Фамилия</div>
+                          <input type="text" placeholder="Шведова">
+                        </div>
+                      </div>
+                      <div class="formblock-form__line">
+                        <div class="field-style__input profile-edit__label-wrap">
+                          <div class="profile-edit__label-text">Дата рождения</div>
                           <input id="mydate" maxlength="10" type="text" placeholder="Дата рождения">
                         </div>
                       </div>
                       <div class="formblock-form__line">
-                        <div class="field-style__input">
+                        <div class="field-style__input profile-edit__label-wrap">
+                          <div class="profile-edit__label-text">Телефон</div>
                           <input type="tel" placeholder="Телефон" id="phone">
                         </div>
                       </div>
                       <div class="formblock-form__line">
-                        <div class="field-style__input">
-                          <input type="text" placeholder="Размер одежды">
+                        <div class="field-style__input profile-edit__label-wrap">
+                          <div class="profile-edit__label-text">Размер одежды</div>
+                          <input type="text" placeholder="Не указан">
                         </div>
                       </div>
                     </div>
                   </div>
                   <!-- /.profile-edit__personal -->
-                </div>
-                <!-- /.profile-edit__inner -->
-                <div class="profile-edit__btn-wrap">
-                  <button class="profile-edit__btn btn"><span>Сохранить изменения</span></button>
-                  <div class="profile-edit__agree">
-                    <div class="input-checkbox">
-                      <input type="checkbox">
+                  <div class="profile-edit__address">
+                    <div class="profile-edit__title">Адрес доставки</div>
+                    <div class="formblock-form">
+                      <div class="formblock-form__line">
+                        <div class="field-style__input profile-edit__label-wrap">
+                          <div class="profile-edit__label-text">Город</div>
+                          <input type="text" placeholder="Киев">
+                        </div>
+                      </div>
+                      <div class="formblock-form__line">
+                        <div class="field-style__input profile-edit__label-wrap">
+                          <div class="profile-edit__label-text">Улица</div>
+                          <input type="text" placeholder="Мечникова">
+                        </div>
+                      </div>
+                      <div class="formblock-form__line formblock-form__line-flex">
+                        <div class="field-style__input profile-edit__label-wrap">
+                          <div class="profile-edit__label-text">Дом</div>
+                          <input type="number" placeholder="71">
+                        </div>
+                        <div class="field-style__input profile-edit__label-wrap">
+                          <div class="profile-edit__label-text">Квартира / офис</div>
+                          <input type="number" placeholder="345">
+                        </div>
+                      </div>
+                      <div class="formblock-form__line formblock-form__line-flex">
+                        <div class="field-style__input profile-edit__label-wrap">
+                          <div class="profile-edit__label-text">Этаж</div>
+                          <input type="number" placeholder="4">
+                        </div>
+                        <div class="field-style__input profile-edit__label-wrap">
+                          <div class="profile-edit__label-text">Подъезд</div>
+                          <input type="number" placeholder="3">
+                        </div>
+                      </div>
                     </div>
-                    <span>
-                      Я соглашаюсь на обработку моих персональных данных
-                      и ознакомлен(а) <a href="conf.html">с условиями конфиденциальности</a>
-                    </span>
+                  </div>
+                  <!-- /.profile-edit__address -->
+                  <div class="profile-edit__btn-wrap">
+                    <div class="profile-edit__agree">
+                      <div class="input-checkbox">
+                        <input type="checkbox">
+                      </div>
+                      <span>
+                        Я соглашаюсь на обработку моих персональных данных
+                        и&nbsp;ознакомлен(а) <a href="conf.html">с условиями конфиденциальности</a>
+                      </span>
+                    </div>
+                    <button class="profile-edit__btn btn"><span>Сохранить изменения</span></button>
                   </div>
                 </div>
+                <!-- /.profile-edit__inner -->
               </div>
               <!-- Редактирование профиля END -->
 
@@ -218,6 +223,32 @@
         <!-- /.container -->
       </div>
       <!-- Страница профиля -->
+
+      <div class="change-password">
+        <div class="change-password__overlay change-password-close-button"></div>
+        <form class="change-password__form" action="">
+          <div class="formblock-form">
+            <div class="change-password__title">Смена пароля</div>
+            <div class="formblock-form__line">
+              <div class="field-style__input">
+                <input type="password" placeholder="Старый пароль">
+              </div>
+            </div>
+            <div class="formblock-form__line">
+              <div class="field-style__input">
+                <input type="password" placeholder="Новый пароль">
+              </div>
+            </div>
+            <div class="formblock-form__line">
+              <div class="field-style__input">
+                <input type="password" placeholder="Подтверждение пароля">
+              </div>
+            </div>
+            <button class="change-password__btn change-password-close-button"><span>Сменить пароль</span></button>
+          </div>
+        </form>
+      </div>
+
 
     </div>
     <!-- wrapper-page__content -->

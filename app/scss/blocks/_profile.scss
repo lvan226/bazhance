@@ -13,7 +13,6 @@
   }
   // .profile__nav-list
   &__nav-list {
-
   }
   &__nav-item {
     font-weight: 300;
@@ -21,7 +20,7 @@
     letter-spacing: 0.1em;
     // text-transform: uppercase;
     display: block;
-    transition: .4s;
+    transition: 0.4s;
     &:hover {
       padding-left: 15px;
     }
@@ -36,16 +35,16 @@
     }
     & + & {
       margin-top: 30px;
-    } 
+    }
   }
   // .profile__content
   &__content {
     width: 100%;
   }
-  }
-  .container {
-  }
-  .profile-enter {
+}
+.container {
+}
+.profile-enter {
   // .profile-enter__inner
   &__inner {
     max-width: 1170px;
@@ -68,7 +67,8 @@
     max-width: calc(25% - 10px);
   }
   // .profile-enter__contact
-  &__contact {}
+  &__contact {
+  }
   // .profile-enter__item-title
   &__item-title {
     font-size: 18px;
@@ -108,10 +108,10 @@
       background-position: center;
     }
   }
-  }
+}
 // Страница профиля входная END=========================================================
 
-// Редактирование профиял ==============================================================
+// Редактирование профиля ==============================================================
 .profile-edit {
   font-weight: 300;
   input {
@@ -124,50 +124,75 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    max-width: 630px;
   }
   // .profile-edit__address
   &__address {
-    max-width: 570px;
     width: 100%;
   }
   // .profile-edit__personal
   &__personal {
-    max-width: 570px;
     width: 100%;
+    margin-bottom: 50px;
   }
   // .profile-edit__btn
   &__btn {
+    display: block;
     max-width: 290px;
     width: 100%;
-    text-align: center;
     padding: 15px 10px;
+    margin: 40px auto 0 auto;
+
     font-size: 12px;
+    text-align: center;
+
     cursor: pointer;
+     // .profile-edit__btn-wrap
     &-wrap {
-      display: flex;
-      justify-content: space-between;
-      max-width: 720px;
-      align-items: center;
-      margin-top: 50px;
+      // display: flex;
+      // justify-content: space-between;
+      // max-width: 720px;
+      // align-items: center;
+      margin-top: 30px;
     }
   }
   // .profile-edit__agree
   &__agree {
-    font-size: 12px;
-    margin-left: 30px;
     display: flex;
+    margin-left: 220px;
+
+    font-size: 12px;
     a {
       border-bottom: 1px solid #000;
       color: #000;
     }
   }
+  // .profile-edit__title
   &__title {
-    margin-bottom: 30px;
-    font-size: 24px;
+    margin-bottom: 20px;
+    padding-left: 255px;
+
+    font-size: 12px;
+    text-transform: uppercase;
     letter-spacing: 0.1em;
   }
-  }
-  .formblock-form {
+}
+.profile-edit__label-wrap {
+  display: flex;
+  justify-content: space-between;
+  // align-items: flex-end;
+  width: 100% !important;
+}
+.profile-edit__label-text {
+  max-width: 220px;
+  width: 100%;
+  padding-top: 10px;
+
+  color: #000;
+  font-size: 14px;
+}
+.formblock-form {
   // .formblock-form__line
   &__line {
     &-check {
@@ -176,75 +201,60 @@
     &-flex {
       display: flex;
       justify-content: space-between;
-      .field-style__input  {
-        width: calc(50% - 15px);
+      .field-style__input {
+        // width: calc(50% - 15px);
+        input {
+          max-width: 80px;
+        }
+      }
+      .profile-edit__label-wrap + .profile-edit__label-wrap {
+        margin-left: 30px;
       }
     }
   }
   // .formblock-form__link
   &__link {
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1;
     display: inline-block;
-    color: #000000;
-    border: none;
-    background: transparent;
-    border-bottom: 1px solid #000;
-    padding: 0;
-    padding-bottom: 2px;
-    cursor: pointer;
     margin-top: 10px;
     margin-bottom: 30px;
+    margin-left: 220px;
+    padding: 0;
+    padding-bottom: 2px;
+
+    color: #000000;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1;
+
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
   }
-  }
-  .field-style {
-  
+}
+.field-style {
   // .field-style__input
   &__input {
     width: calc(100% - 15px);
+    input {
+      padding-left: 15px;
+      font-size: 14px;
+      &::placeholder {
+        color: #bdbdbd;
+      }
+    }
   }
-  }
-  .input-checkbox {
-  }
-  .catalog-item {
+}
+.input-checkbox {
+}
+.catalog-item {
   // .catalog-item__size
-  &__size {}
-  }
-  .btn {
-  }
-// Редактирование профиял END ==============================================================
-
-// Смена пароля ========================================================================
-.change-password {
-  max-width: 570px;
-  &__btn {
-    padding: 15px 60px;
-    background-color: #000;
-    border: none;
-    font-weight: normal;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #fff;
-    margin-top: 20px;
+  &__size {
   }
 }
-.formblock-form {
-// .formblock-form__line
-&__line {}
+.btn {
 }
-.profile-edit {
-// .profile-edit__title
-&__title {}
-}
-.field-style {
-// .field-style__input
-&__input {}
-}
-// Смена пароля END ========================================================================
-
-
-
+// Редактирование профиля END ==============================================================
 
 // Мои заказы =================================================================
 .my-orders {
@@ -260,16 +270,19 @@
   // .my-orders__title
   &__title {
     margin-bottom: 30px;
-    font-size: 24px;
+    font-size: 12px;
     color: #000000;
   }
   // .my-orders__number
   &__number {
     margin-bottom: 10px;
+
+    color: #555555;
+    font-size: 10px;
   }
   // .my-orders__status
   &__status {
- 
+    font-size: 12px;
   }
   // .my-orders__return
   &__return {
@@ -279,7 +292,7 @@
     cursor: pointer;
     width: 30px;
     text-align: center;
-    transition: .3s;
+    transition: 0.3s;
     width: 30px;
     height: 30px;
     display: block;
@@ -287,7 +300,7 @@
     background-color: transparent;
     outline: none;
     &:focus {
-      outline: none;  
+      outline: none;
     }
     &:hover {
       transform: scale(1.1);
@@ -314,61 +327,80 @@
     }
   }
   // .my-orders__inner
-  &__inner {}
+  &__inner {
+  }
   // .my-orders__orders-item
-  &__orders-item {}
+  &__orders-item {
   }
-  .orderblock {
+}
+.orderblock {
   // .orderblock__close
-  &__close {}
+  &__close {
+  }
   // .orderblock__img
-  &__img {}
+  &__img {
+  }
   // .orderblock__content
-  &__content {}
+  &__content {
+  }
   // .orderblock__title
-  &__title {}
+  &__title {
+  }
   // .orderblock__subtitle
-  &__subtitle {}
+  &__subtitle {
+  }
   // .orderblock__info
-  &__info {}
+  &__info {
+  }
   // .orderblock__color
-  &__color {}
+  &__color {
+  }
   // .orderblock__info-title
-  &__info-title {}
+  &__info-title {
+  }
   // .orderblock__color-type
-  &__color-type {}
+  &__color-type {
+  }
   // .orderblock__size
-  &__size {}
+  &__size {
+  }
   // .orderblock__info-count
-  &__info-count {}
+  &__info-count {
+  }
   // .orderblock__length
-  &__length {}
+  &__length {
+  }
   // .orderblock__country
-  &__country {}
+  &__country {
+  }
   // .orderblock__sum
-  &__sum {}
+  &__sum {
+  }
   // .orderblock__sum-wrap
-  &__sum-wrap {}
+  &__sum-wrap {
+  }
   // .orderblock__sum-count
-  &__sum-count {}
+  &__sum-count {
+  }
   // .orderblock__price
-  &__price {}
+  &__price {
   }
-  .orderblock-type1 {
-  }
-  .ibg {
-  }
-  .orderblock-ended {
-  }
-  .orderblock-type2 {
-  }
+}
+.orderblock-type1 {
+}
+.ibg {
+}
+.orderblock-ended {
+}
+.orderblock-type2 {
+}
 // Мои заказы END =================================================================
 
-
-// Мои подписки ====================================================================================== 
+// Мои подписки ======================================================================================
 .my-subscruptions {
   // .my-subscruptions__info
-  &__info {}
+  &__info {
+  }
   // .my-subscruptions__title
   &__title {
     font-size: 24px;
@@ -378,61 +410,78 @@
     font-weight: 300;
   }
   // .my-subscruptions__inner
-  &__inner {}
+  &__inner {
+  }
   // .my-subscruptions__orders-item
-  &__orders-item {}
+  &__orders-item {
   }
-  .orderblock {
+}
+.orderblock {
   // .orderblock__close
-  &__close {}
+  &__close {
+  }
   // .orderblock__img
-  &__img {}
+  &__img {
+  }
   // .orderblock__content
-  &__content {}
+  &__content {
+  }
   // .orderblock__title
-  &__title {}
+  &__title {
+  }
   // .orderblock__subtitle
-  &__subtitle {}
+  &__subtitle {
+  }
   // .orderblock__info
-  &__info {}
+  &__info {
+  }
   // .orderblock__color
-  &__color {}
+  &__color {
+  }
   // .orderblock__info-title
-  &__info-title {}
+  &__info-title {
+  }
   // .orderblock__color-type
-  &__color-type {}
+  &__color-type {
+  }
   // .orderblock__size
-  &__size {}
+  &__size {
+  }
   // .orderblock__info-count
-  &__info-count {}
+  &__info-count {
+  }
   // .orderblock__length
-  &__length {}
+  &__length {
+  }
   // .orderblock__country
-  &__country {}
+  &__country {
+  }
   // .orderblock__sum
-  &__sum {}
+  &__sum {
+  }
   // .orderblock__sum-wrap
-  &__sum-wrap {}
+  &__sum-wrap {
+  }
   // .orderblock__sum-count
-  &__sum-count {}
+  &__sum-count {
+  }
   // .orderblock__price
-  &__price {}
+  &__price {
   }
-  .orderblock-type1 {
-  }
-  .ibg {
-  }
-  .color-black {
-  }
-  .orderblock-ended {
-  }
-  .orderblock-type2 {
-  }
-  .color-red {
-  }
-// Мои подписки END ====================================================================================== 
-
-
+}
+.orderblock-type1 {
+}
+.ibg {
+}
+.color-black {
+}
+.orderblock-ended {
+}
+.orderblock-type2 {
+}
+.color-red {
+}
+// Мои подписки END ======================================================================================
 
 // Избранные товары ======================================================================
 .profile-favorites {
@@ -443,7 +492,8 @@
       min-height: 530px;
     }
   }
-  &__inner {}
+  &__inner {
+  }
   // .profile-favorites__row
   &__row {
     display: flex;
@@ -457,45 +507,57 @@
     margin: 0 15px;
     margin-bottom: 50px;
   }
-  }
-  .container {
-  }
-  .productblock {
+}
+.container {
+}
+.productblock {
   // .productblock__imagebox
-  &__imagebox {}
+  &__imagebox {
+  }
   // .productblock__imagebox-new
-  &__imagebox-new {}
+  &__imagebox-new {
+  }
   // .productblock__imagebox-heart
-  &__imagebox-heart {}
+  &__imagebox-heart {
+  }
   // .productblock__imagebox-sizewrap
-  &__imagebox-sizewrap {}
+  &__imagebox-sizewrap {
+  }
   // .productblock__imagebox-size
-  &__imagebox-size {}
+  &__imagebox-size {
+  }
   // .productblock__imagebox-btn
-  &__imagebox-btn {}
+  &__imagebox-btn {
+  }
   // .productblock__info
-  &__info {}
+  &__info {
+  }
   // .productblock__info-name
-  &__info-name {}
+  &__info-name {
+  }
   // .productblock__info-country
-  &__info-country {}
+  &__info-country {
+  }
   // .productblock__info-pricewrap
-  &__info-pricewrap {}
+  &__info-pricewrap {
+  }
   // .productblock__info-colortext
-  &__info-colortext {}
+  &__info-colortext {
+  }
   // .productblock__info-colors
-  &__info-colors {}
+  &__info-colors {
   }
-  .color-neznayu1 {
-  }
-  .color-neznayu2 {
-  }
-  .color-neznayu3 {
-  }
-  .color-black {
-  }
-  .color-red {
-  }
+}
+.color-neznayu1 {
+}
+.color-neznayu2 {
+}
+.color-neznayu3 {
+}
+.color-black {
+}
+.color-red {
+}
 // Избранные товары END ======================================================================
 
 // Политика конфендециальности ===============================================================
@@ -507,7 +569,8 @@
   color: #000000;
 
   // .conf__inner
-  &__inner {}
+  &__inner {
+  }
   // .conf__list
   &__list {
     margin: 0;
@@ -519,53 +582,56 @@
     }
   }
   // .conf__list-num
-  &__list-num {}
+  &__list-num {
   }
-  .container {
-  }
+}
+.container {
+}
 // Политика конфендециальности  END ===============================================================
 
 // Публичная оферта =================================================================================
 .conf {
   line-height: 1.6;
   // .conf__inner
-  &__inner {}
+  &__inner {
+  }
   // .conf__list
-  &__list {}
+  &__list {
+  }
   // .conf__list-num
-  &__list-num {}
+  &__list-num {
   }
-  .public-offer {
-    strong  {
-      font-weight: 400;
+}
+.public-offer {
+  strong {
+    font-weight: 400;
+  }
+  ol {
+    padding: 0;
+    /* убираем стандартную нумерацию */
+    list-style: none;
+    /* Идентифицируем счетчик и даем ему имя li. Значение счетчика не указано - по умолчанию оно равно 0 */
+    counter-reset: li;
+  }
+  & ol > li:before {
+    /* Определяем элемент, который будет нумероваться — li. Псевдоэлемент before указывает, что содержимое, вставляемое при помощи свойства content, будет располагаться перед пунктами списка. Здесь же устанавливается значение приращения счетчика (по умолчанию равно 1). */
+    counter-increment: li;
+    /* С помощью свойства content выводится номер пункта списка. counters() означает, что генерируемый текст представляет собой значения всех счетчиков с таким именем. Точка в кавычках добавляет разделяющую точку между цифрами, а точка с пробелом добавляется перед содержимым каждого пункта списка */
+    content: counters(li, ".") ". ";
+  }
+  ul {
+    li {
+      margin-bottom: 0;
     }
-    ol {
-      padding: 0;
-      /* убираем стандартную нумерацию */
-      list-style: none; 
-      /* Идентифицируем счетчик и даем ему имя li. Значение счетчика не указано - по умолчанию оно равно 0 */ 
-      counter-reset: li; 
-      }
-      & ol > li:before {
-      /* Определяем элемент, который будет нумероваться — li. Псевдоэлемент before указывает, что содержимое, вставляемое при помощи свойства content, будет располагаться перед пунктами списка. Здесь же устанавливается значение приращения счетчика (по умолчанию равно 1). */
-      counter-increment: li; 
-      /* С помощью свойства content выводится номер пункта списка. counters() означает, что генерируемый текст представляет собой значения всех счетчиков с таким именем. Точка в кавычках добавляет разделяющую точку между цифрами, а точка с пробелом добавляется перед содержимым каждого пункта списка */
-      content: counters(li,".") ". "; 
-      }
-      ul {
-        li {
-          margin-bottom: 0;
-        }
-        li:before {
-          content: "-";
-          margin-right: 5px;
-        }
-      }
+    li:before {
+      content: "-";
+      margin-right: 5px;
+    }
   }
-  .container {
-  }
+}
+.container {
+}
 // Публичная оферта END =================================================================================
-
 
 // Меню в профиле =================================
 
@@ -636,7 +702,7 @@
       // margin-bottom: 0;
       margin-right: 0;
     }
-    .productblock__imagebox-sizewrap label+label {
+    .productblock__imagebox-sizewrap label + label {
       margin-left: 14px;
     }
   }
@@ -691,13 +757,13 @@
   .profile-favorites .productblock__imagebox {
     min-height: 260px;
   }
-  .profile-favorites .productblock__imagebox-sizewrap label+label {
+  .profile-favorites .productblock__imagebox-sizewrap label + label {
     margin-left: 7px;
   }
   .profile-favorites .productblock__info {
     padding-left: 0;
     padding-right: 0;
-  }   
+  }
 }
 @media (max-width: 450px) {
   .profile-favorites .productblock__imagebox {
@@ -710,7 +776,7 @@
   }
 }
 @media (max-width: 400px) {
-  .profile-favorites .productblock__imagebox-sizewrap label+label {
+  .profile-favorites .productblock__imagebox-sizewrap label + label {
     margin-left: 5px;
   }
   .profile-favorites .productblock__imagebox {
@@ -718,7 +784,6 @@
   }
 }
 // Избранные товары END =====================================================================================
-
 
 // Профиль основной ======================================================
 
@@ -750,21 +815,22 @@
 
 // Профиль основной END =====================================================
 
-
 // Редактировать профиль =====================================================
+.profile-edit__inner {
+}
 @media (max-width: $elg) {
   .profile-edit__personal,
-  .profile-edit__address  {
-    max-width: 410px;
+  .profile-edit__address {
+    // max-width: 410px;
   }
 }
 @media (max-width: $lgh) {
   .profile-edit__inner {
-    flex-direction: column;
+    // flex-direction: column;
   }
   .profile-edit__personal,
-  .profile-edit__address  {
-    max-width: 100%;
+  .profile-edit__address {
+    // max-width: 100%;
   }
 }
 @media (max-width: $xs) {
@@ -776,7 +842,6 @@
     margin-bottom: 10px;
   }
   .profile-edit__agree {
-    margin-left: 0;
     font-size: 9px;
   }
   .profile-edit input {
@@ -786,6 +851,103 @@
 // Редактировать профиль END =================================================
 
 // Сменить пароль =============================================================
+.change-password {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  &--active {
+    z-index: 1000;
+  }
+
+  .field-style__input {
+    width: 100%;
+  }
+
+  // .change-password__overlay
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    background-color: rgba(#000, 0);
+
+    &--active {
+      background-color: rgba(#000, 0.5);
+    }
+  }
+
+  // .change-password__form
+
+  &__form {
+    transform: translateY(-100vh);
+
+    max-width: 410px;
+    width: 100%;
+    padding: 75px 55px;
+
+    background-color: #fff;
+
+    transition: 0.35s;
+    &--active {
+      transform: translateY(0);
+    }
+  }
+
+  // .change-password__title
+
+  &__title {
+    margin-bottom: 30px;
+
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1px;
+  }
+
+  // .change-password__btn
+
+  &__btn {
+    display: block;
+
+    width: 100%;
+    margin-top: 30px;
+    padding: 12px 10px;
+
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    background-color: #000;
+    border: none;
+  }
+}
+.formblock-form {
+  // .formblock-form__line
+
+  &__line {
+  }
+}
+.field-style {
+  // .field-style__input
+
+  &__input {
+  }
+}
+
 @media (max-width: $xs) {
   .change-password {
     .field-style__input input {
@@ -798,24 +960,23 @@
 }
 // Сменить пароль END =========================================================
 
-
 // Мои подписки и заказы ===============================================================
 @media (max-width: $elg) {
   .my-subscruptions,
   .my-orders {
-    .orderblock__color {
-      margin-right: 35px;
-    }
-    .orderblock__size {
-      margin-right: 30px;
-    }
-    .orderblock__length {
-      margin-right: 30px;
-    }
-    .orderblock__title {
-      font-size: 18px;
-      // line-height: 1;
-    }
+    // .orderblock__color {
+    //   margin-right: 35px;
+    // }
+    // .orderblock__size {
+    //   margin-right: 30px;
+    // }
+    // .orderblock__length {
+    //   margin-right: 30px;
+    // }
+    // .orderblock__title {
+    //   // font-size: 18px;
+    //   // line-height: 1;
+    // }
   }
 }
 @media (max-width: 1300px) {
@@ -841,7 +1002,6 @@
 @media (max-width: $lgh) {
   .my-subscruptions,
   .my-orders {
-    
   }
 }
 @media (max-width: $lg) {
@@ -864,7 +1024,6 @@
 @media (max-width: $md) {
   .my-subscruptions,
   .my-orders {
-    
   }
 }
 @media (max-width: $sm) {
@@ -876,7 +1035,7 @@
       top: 10px;
     }
     .orderblock__title {
-      font-size: 16px;
+      // font-size: 16px;
       // line-height: 1;
     }
   }
@@ -884,12 +1043,10 @@
 @media (max-width: $xs) {
   .my-subscruptions,
   .my-orders {
-    
   }
 }
 
 // Мои подписки и заказы END ===========================================================
-
 
 // Политика конфендициальности ========================================================
 @media (max-width: $sm) {

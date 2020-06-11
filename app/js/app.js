@@ -321,6 +321,18 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
+	// Форма сменить пароль
+	$(".change-password-active-button").on('click', function () {
+		$('.change-password').addClass('change-password--active');
+		$('.change-password__overlay').addClass('change-password__overlay--active');
+		$('.change-password__form').addClass('change-password__form--active');
+	});
+
+	$(".change-password-close-button").on('click', function () {
+		$('.change-password').removeClass('change-password--active');
+		$('.change-password__overlay').removeClass('change-password__overlay--active');
+		$('.change-password__form').removeClass('change-password__form--active');
+	});
 });
 
 // function inputField(input, line) {
