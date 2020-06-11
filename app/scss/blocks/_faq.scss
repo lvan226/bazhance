@@ -2,12 +2,12 @@
 .faqblock {
   @include ps;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.6;
   font-weight: 300;
   color: #000;
   p {
-    max-width: 300px;
+    // max-width: 300px;
     margin-bottom: 30px;
     
     font-size: 14px;
@@ -76,7 +76,7 @@
     font-weight: 400;
   }
   &__textwrap {
-    max-width: 720px;
+    max-width: 530px;
   }
 // .faq__list
 &__list {

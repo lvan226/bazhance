@@ -7,7 +7,7 @@
   }
   // .profile__nav
   &__nav {
-    max-width: 420px;
+    max-width: 300px;
     width: 100%;
     margin-right: 30px;
   }
@@ -17,9 +17,9 @@
   }
   &__nav-item {
     font-weight: 300;
-    font-size: 18px;
+    font-size: 14px;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     display: block;
     transition: .4s;
     &:hover {
@@ -32,7 +32,7 @@
       a {
         color: #000;
       }
-      padding-left: 15px;
+      // padding-left: 15px;
     }
     & + & {
       margin-top: 30px;
@@ -607,14 +607,15 @@
 // Меню в профиле END =================================
 // Избранные товары =====================================================================================
 .profile-favorites__header-title {
-  margin-bottom: 30px;
-  font-size: 24px;
+  margin-bottom: 40px;
+  font-size: 12px;
+  text-transform: uppercase;
   font-weight: 300;
   line-height: 1;
 }
 @media (max-width: $elg) {
   .profile__nav-item {
-    font-size: 16px;
+    font-size: 14px;
   }
   .profile__nav {
     max-width: 300px;
@@ -623,7 +624,7 @@
     min-height: 390px;
   }
   .profile__nav-item.active {
-    padding-left: 0;
+    // padding-left: 0;
   }
   // favorites ==============
   .profile-favorites {
