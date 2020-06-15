@@ -21,6 +21,7 @@
     font-size: 12px;
     font-weight: 300;
     text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
   a:not(.faq__text-link) {
     color: #000;
@@ -135,12 +136,17 @@
   margin-bottom: 100px;
   max-width: 815px;
 }
+
+.information-pay .faq__col {
+  width: 46%;
+  margin-bottom: 100px;
+}
 // Информация об оплате END =============================================
 
 // Условия доставки ====================================================
 .condition-return {
   .faq__inner {
-    margin-bottom: -135px;
+    // margin-bottom: -135px;
   }
 }
 // Условия доставки END ================================================
@@ -150,6 +156,7 @@
   font-weight: 400;
 }
 .stylist-help__contact {
+  margin-bottom: 100px;
   a {
     padding-left: 35px;
     position: relative;
@@ -278,7 +285,7 @@
     }
   }
   .condition-return .faq__inner {
-    margin-bottom: -30px;
+    // margin-bottom: -30px;
   }
 }
 // Возврат и обмен END =============================

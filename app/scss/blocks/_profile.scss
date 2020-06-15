@@ -54,8 +54,16 @@
   }
   // .profile-enter__title
   &__title {
-    font-size: 24px;
+    font-size: 20px;
+  }
+  // .profile-enter__title-wrap
+  &__title-wrap {
+    display: flex;
+
     margin-bottom: 30px;
+    @media (max-width: $md) {
+      flex-direction: column;
+    }
   }
   // .profile-enter__box
   &__box {
@@ -71,28 +79,32 @@
   }
   // .profile-enter__item-title
   &__item-title {
-    font-size: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+
+    font-size: 12px;
     text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
-  // .profile-enter__item-text
+  // .profile-enter__item-email
   &__item-email {
+    font-size: 14px;
     white-space: nowrap; /* Отменяем перенос текста */
     overflow: hidden; /* Обрезаем содержимое */
     text-overflow: ellipsis; /* Многоточие */
   }
+  // .profile-enter__item-text
   &__item-text {
-    color: #555;
     display: block;
+
+    color: #555;
+    font-size: 14px;
     & + & {
       margin-top: 20px;
     }
   }
   // .profile-enter__edit
   &__edit {
-    margin-top: 60px;
-    font-size: 18px;
-    margin-left: 31px;
+    font-size: 14px;
     position: relative;
     border-bottom: 1px solid #000;
     &::before {
@@ -101,11 +113,21 @@
       left: -31px;
       top: 0;
       background-image: url(../images/dest/registration/pancil.png);
-      width: 21px;
-      height: 21px;
+      width: 18px;
+      height: 18px;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+    }
+  }
+
+  // .profile-enter__edit-wrap
+
+  &__edit-wrap {
+    margin-left: 20%;
+    @media (max-width: $md) {
+      margin-top: 10px;
+      margin-left: 30px;
     }
   }
 }
@@ -148,12 +170,8 @@
     text-align: center;
 
     cursor: pointer;
-     // .profile-edit__btn-wrap
+    // .profile-edit__btn-wrap
     &-wrap {
-      // display: flex;
-      // justify-content: space-between;
-      // max-width: 720px;
-      // align-items: center;
       margin-top: 30px;
     }
   }
@@ -163,6 +181,9 @@
     margin-left: 220px;
 
     font-size: 12px;
+    @media (max-width: $sm) {
+      margin-left: 0;
+    }
     a {
       border-bottom: 1px solid #000;
       color: #000;
@@ -176,6 +197,9 @@
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    @media (max-width: $sm) {
+      padding-left: 0;
+    }
   }
 }
 .profile-edit__label-wrap {
@@ -183,6 +207,9 @@
   justify-content: space-between;
   // align-items: flex-end;
   width: 100% !important;
+  @media (max-width: $xs) {
+    flex-direction: column;
+  }
 }
 .profile-edit__label-text {
   max-width: 220px;
@@ -191,6 +218,10 @@
 
   color: #000;
   font-size: 14px;
+  @media (max-width: $xs) {
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
 }
 .formblock-form {
   // .formblock-form__line
@@ -205,6 +236,9 @@
         // width: calc(50% - 15px);
         input {
           max-width: 80px;
+          @media (max-width: $xs) {
+            max-width: 100%;
+          }
         }
       }
       .profile-edit__label-wrap + .profile-edit__label-wrap {
@@ -230,15 +264,24 @@
     border: none;
     border-bottom: 1px solid #000;
     cursor: pointer;
+    @media (max-width: $sm) {
+      margin-left: 0;
+    }
   }
 }
 .field-style {
   // .field-style__input
   &__input {
     width: calc(100% - 15px);
+    margin-bottom: 20px;
     input {
-      padding-left: 15px;
+      width: 100%;
+      padding: 10px 15px 10px 12px;
+
       font-size: 14px;
+
+      border: none;
+      border-bottom: 1px solid #BDBDBD;
       &::placeholder {
         color: #bdbdbd;
       }
@@ -564,7 +607,7 @@
 .conf {
   @include ps;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 14px;
   // line-height: 160%;
   color: #000000;
 
@@ -578,7 +621,7 @@
     li {
       display: list-item;
       list-style-position: inside;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
   }
   // .conf__list-num
@@ -796,20 +839,13 @@
     width: 100%;
     margin-bottom: 50px;
   }
-  .profile-enter__edit {
-    margin-top: 0;
-  }
 }
 @media (max-width: $xs) {
   .profile-enter__item {
     max-width: 100%;
   }
-  .profile-enter__title {
-    font-size: 20px;
-    margin-bottom: 50px;
-  }
   .profile-enter__item-title {
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
   }
 }
 
@@ -897,10 +933,16 @@
     max-width: 410px;
     width: 100%;
     padding: 75px 55px;
+    overflow-y: auto;
 
     background-color: #fff;
 
     transition: 0.35s;
+    @media (max-width: $xs) {
+      max-width: 90%;
+      max-height: 95%;
+      padding: 35px 7vw;
+    }
     &--active {
       transform: translateY(0);
     }

@@ -91,76 +91,51 @@
       <div class="registration-block">
         <div class="container">
           <div class="registration-block__inner">
-            <div class="inputblock">
-              <div class="inputblock__title">Вход</div>
-              <form>
-                <div class="field-style__input">
-                  <input type="text" placeholder="E-mail">
-                </div>
-                <div class="field-style__input">
-                  <input type="text" placeholder="Пароль">
-                </div>
-                <a class="forgot-link" href="">Забыли пароль?</a>
-                <div class="inputblock__info">
-                  <button class="inputblock__info-btn btn">Войти</button>
-                  <div class="inputblock__info-social">
-                    <span>Войти с помощью</span>
-                    <a href=""><img src="images/dest/registration/gmail-icon.svg" alt=""></a>
-                    <a href=""><img src="images/dest/registration/facebook-icon.svg" alt=""></a>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <!-- /.inputblock -->
-            <div class="registrblock active">
-              <div class="registrblock__title">Регистрация</div>
-              <form>
-                <div class="field-style__input">
-                  <input type="text" placeholder="Имя">
-                </div>
-                <div class="field-style__input">
-                  <input type="text" placeholder="E-mail">
-                </div>
-                <div class="field-style__input">
-                  <input type="text" placeholder="Пароль">
-                </div>
-                <div class="field-style__input">
-                  <input type="text" placeholder="Подтверждение пароля">
-                </div>
-                <div class="registrblock__alert">
-                  <span>Я хочу быть в курсе акций и поступлений</span>
-                  <label class="input-checkbox">
-                    <input name="registration-alert" type="radio">
-                    <span class="catalog-item__size">Да</span>
-                  </label>
-                  <label class="input-checkbox">
-                    <input name="registration-alert" type="radio">
-                    <span class="catalog-item__size">Нет</span>
-                  </label>
-                </div>
-                <div class="registrblock__info">
-                  <button class="registrblock__info-btn btn">Зарегистрироваться</button>
-                  <div class="registrblock__info-text">
-                    Нажимая Зарегистрироваться я принимаю
-                    <a href="conf.html">Политику Конфиденциальности</a>
-                  </div>
-                </div>
-                <div class="registrblock__social">
-                  <span>Зарегистрироваться с помощью</span>
-                  <div class="registblock__social-links">
-                    <a href=""><img src="images/dest/registration/gmail-icon.svg" alt=""></a>
-                    <a href=""><img src="images/dest/registration/facebook-icon.svg" alt=""></a>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <!-- /.registrblock -->
+            <div class="registration-block__title">Вход</div>
+            <form action="" method="POST">
+              <div class="registration-block__input-wrap">
+                <input class="registration-block__input" type="email" placeholder="E-mail" required>
+              </div>
+              <div class="registration-block__input-wrap">
+                <input class="registration-block__input" type="password" placeholder="Пароль" required>
+              </div>
+              <a class="registration-block__link" href="#">Восстановить пароль</a>
+              <div class="inputblock__info">
+                <button class="registration-block__btn btn">Войти</button>
+              </div>
+            </form>
+            <button class="registration-block__btn-modal registration-modal-active-object">Зарегистрироваться</button>
           </div>
           <!-- /.registration-block__inner -->
         </div>
         <!-- /.container -->
       </div>
       <!-- Блок регистрации и входа -->
+
+      <div class="registration-modal">
+        <div class="registration-modal__overlay registration-modal-close-object"></div>
+        <div class="registration-modal__inner">
+          <form action="" method="POST">
+            <div class="registration-modal__title">Зарегистрироваться</div>
+            <div class="registration-modal__input-wrap">
+              <input class="registration-modal__input" type="email" placeholder="E-mail" required   >
+            </div>
+            <div class="registration-modal__input-wrap">
+              <input class="registration-modal__input" type="password" placeholder="Пароль" required>
+            </div>
+            <div class="registration-modal__input-wrap">
+              <input class="registration-modal__input" type="password" placeholder="Повторите пароль" required>
+            </div>
+            <button class="registration-modal__btn">Зарегистрироваться</button>
+            <div class="registration-modal__stock">
+              <label class="registration-modal__label">
+                <input type="checkbox" class="registration-modal__stock-check">
+                <span class="registration-modal__stock-text">Я хочу быть в курсе акций и поступлений</span>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
 
 
     </div>

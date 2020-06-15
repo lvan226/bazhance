@@ -53,7 +53,7 @@
   // .orderblock__heading
   &__heading {
     display: flex;
-    padding-top: 25px;
+    padding-top: 20px;
     @media (max-width: $md) {
       flex-direction: column;
     }
@@ -218,9 +218,10 @@
   }
   // .basket-issue__info-cost
   &__info-cost {
-    font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+
     font-size: 14px;
+    font-weight: 300;
   }
   // .basket-issue__info-value
   &__info-value {
@@ -230,11 +231,13 @@
   // .basket-issue__info-btn
   &__info-btn {
     // display: block;
-    max-width: 290px;
-    padding: 10px 50px;
+    max-width: 241px;
+    width: 100%;
+    padding: 10px 5px;
+    min-height: 43px;
+
     font-size: 12px;
-    min-height: 50px;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 10px;
   }
   &__info-agree {

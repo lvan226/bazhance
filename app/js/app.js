@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	// Стилизация селектов
-	$('select, .styler-form-element *, .input-checkbox *').styler({
+	$('select, .styler-form-element *, .input-checkbox *, .registration-modal__stock-check').styler({
 
 	});
 
@@ -332,6 +332,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		$('.change-password').removeClass('change-password--active');
 		$('.change-password__overlay').removeClass('change-password__overlay--active');
 		$('.change-password__form').removeClass('change-password__form--active');
+	});
+
+	// Форма регистрации
+	$(".registration-modal-active-object").on('click', function () {
+		$('.registration-modal').addClass('registration-modal--active');
+	});
+
+	$(".registration-modal-close-object").on('click', function () {
+		$('.registration-modal').removeClass('registration-modal--active');
 	});
 });
 
