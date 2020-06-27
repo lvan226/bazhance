@@ -45,7 +45,7 @@
   // .product-one__slider-item
   &__slider-item {
     height: 110px;
-    width: 100%;
+    width: 100% !important;
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -590,7 +590,7 @@
 
 // Слайдер вам может понравится END ==========================================================================
 .product-one__imageandsliderwrap {
-  max-width: 630px;
+  max-width: 660px;
   width: 100%;
   display: flex;
 }
